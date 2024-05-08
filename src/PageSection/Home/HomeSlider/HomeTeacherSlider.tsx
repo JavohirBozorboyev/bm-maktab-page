@@ -1,0 +1,122 @@
+"use client";
+import React, { useState } from "react";
+import HomeTeacherSliderCard from "./HomeTeacherSliderCard";
+import Link from "next/link";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import PageTitle from "@/Components/PageTitle/PageTitle";
+
+type Props = {
+  data: {
+    name: string;
+    subject: string;
+    img: string;
+  }[];
+};
+
+const HomeTeacherSlider = ({ data }: Props) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    loop: false,
+    breakpoints: {
+      "(min-width: 400px)": {
+        slides: { perView: 1.2, spacing: 10 },
+      },
+      "(min-width: 640px)": {
+        slides: { perView: 2.2, spacing: 10 },
+      },
+      "(min-width: 768px)": {
+        slides: { perView: 2.5, spacing: 10 },
+      },
+      "(min-width: 1024px)": {
+        slides: { perView: 3.2, spacing: 10 },
+      },
+      "(min-width: 1280px)": {
+        slides: { perView: 4, spacing: 10 },
+      },
+    },
+    slides: { perView: 1 },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
+    },
+  });
+
+  return (
+    <div className=" relative py-10">
+      <div className="container mx-auto p-4 md:p-0 py-4  flex flex-col items-center ">
+        <PageTitle
+          title={"Bizning Ustozlar"}
+          info={"Dream Team"}
+          content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, iure? consectetur adipisicing elit. Illo, iure?"
+        />
+
+        <div ref={sliderRef} className="keen-slider  mt-4  relative">
+          {data.map((item, i) => {
+            return <HomeTeacherSliderCard key={i} data={item} />;
+          })}
+          {/* <div className="h-[160px]  backdrop-blur-sm bg-gradient-to-b from-transparent to-gray-100 absolute bottom-0 left-0 right-0 rounded-t-2xl flex items-center justify-center">
+            <Link
+              href={"/"}
+              className="bg-slate-700  p-4 px-8 text-white rounded-lg shadow-[0_5px_15px]  shadow-slate-700 hover:scale-110 duration-300"
+            >
+              {"Barchasini Ko'rish"}
+            </Link>
+          </div> */}
+
+          {loaded && instanceRef.current && (
+            <>
+              <Arrow
+                left
+                onClick={(e: any) =>
+                  e.stopPropagation() || instanceRef.current?.prev()
+                }
+                disabled={currentSlide === 0}
+              />
+
+              <Arrow
+                onClick={(e: any) =>
+                  e.stopPropagation() || instanceRef.current?.next()
+                }
+                disabled={
+                  currentSlide ===
+                  instanceRef.current.track.details.slides.length - 1
+                }
+              />
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HomeTeacherSlider;
+
+function Arrow(props: {
+  disabled: boolean;
+  left?: boolean;
+  onClick: (e: any) => void;
+}) {
+  const disabled = props.disabled ? " arrow--disabled" : "";
+  return (
+    <svg
+      onClick={props.onClick}
+      className={`arrow ${
+        props.left ? "arrow--left" : "arrow--right"
+      } ${disabled}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      {props.left && (
+        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+      )}
+      {!props.left && (
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+      )}
+    </svg>
+  );
+}
