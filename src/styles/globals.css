@@ -37,3 +37,19 @@
   right: 5px;
 }
 
+.animate-logo{
+  animation: logoAn 3s infinite alternate-reverse;
+ 
+}
+
+
+@keyframes logoAn {
+  from{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to{
+    transform: translateY(20px);
+    opacity: 0.7;
+  }
+}

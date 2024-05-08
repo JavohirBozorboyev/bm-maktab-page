@@ -29,7 +29,7 @@ const AppNavbar = (props: Props) => {
               <Link
                 key={i}
                 href={item.path}
-                className={`text-gray-400 text-base py-1 col-span-2 font-mono flex items-center justify-center rounded-full hover:bg-gray-200 duration-300 ${
+                className={`text-slate-700 text-base py-1 col-span-2 font-mono flex items-center justify-center rounded-full hover:bg-gray-200 duration-300 ${
                   path === item.path
                     ? "text-white bg-yellow-500 hover:bg-yellow-600"
                     : ""
@@ -43,7 +43,7 @@ const AppNavbar = (props: Props) => {
         <div className="hidden md:flex justify-end  items-center ">
           <Link
             href={"/"}
-            className={`text-gray-400 text-base relative  font-mono  overflow-hidden  bg-gradient-to-r from-slate-200 to-gray-200  flex items-center justify-between rounded-full gap-7 hover:from-yellow-500 hover:to-yellow-500 hover:text-white fill-gray-400 hover:fill-white duration-300
+            className={`text-slate-700 text-base relative  font-mono  overflow-hidden  bg-gradient-to-r from-slate-200 to-gray-200  flex items-center justify-between rounded-full gap-7 hover:from-yellow-500 hover:to-yellow-500 hover:text-white fill-slate-700 hover:fill-white duration-300
               
               `}
           >

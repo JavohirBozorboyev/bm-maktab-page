@@ -45,7 +45,11 @@ const HomeHero = (props: Props) => {
           </div>
         </div>
         <div className="col-span-12 md:col-span-5 flex justify-center">
-          <BmLogo width={250} height={250} class="w-96 h-96" />
+          <BmLogo
+            width={250}
+            height={250}
+            class="w-96 h-96    hover:-rotate-12 duration-300 animate-logo"
+          />
         </div>
 
         {/* <div className="homeBg absolute w-full h-full rounded-xl top-0 bottom-0"></div> */}
