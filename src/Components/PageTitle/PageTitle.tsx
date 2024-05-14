@@ -8,12 +8,12 @@ type Props = {
 
 const PageTitle = ({ title, info, content }: Props) => {
   return (
-    <div className="py-8 flex flex-col justify-center items-center gap-8 max-w-xl">
+    <div className="py-8 grid grid-cols-1 text-center gap-5 max-w-xl">
       {info && (
         <p className="text-sm font-bold  text-gray-400 uppercase">{info}</p>
       )}
-      {title && <h1 className="text-3xl font-bold text-slate-700">{title}</h1>}
-      {content && <p className="text-gray-400 text-center">{content}</p>}
+      {title && <h1 className="text-2xl md:text-3xl font-bold text-slate-700">{title}</h1>}
+      {content && <p className="text-gray-400 text-center text-sm md:text-base">{content}</p>}
     </div>
   );
 };

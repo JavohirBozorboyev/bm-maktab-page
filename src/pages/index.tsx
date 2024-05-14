@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import HomeHero from "@/PageSection/Home/HomeHero";
 import HomeResultSection from "@/PageSection/Home/HomeResult/HomeResultSection";

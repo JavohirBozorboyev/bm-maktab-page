@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import NextLogo from "@/../public/next.svg";
-import Image from "next/image";
+
 import Link from "next/link";
 
 import { AppNavData } from "@/data/AppNavData";
+import BmLogo from "@/assets/BmLogo";
 
 type Props = {};
 
@@ -12,13 +13,7 @@ const AppFooter = (props: Props) => {
     <div className=" bg-gray-100 shadow-inner shadow-white py-14">
       <div className="container p-4 md:p-0 mx-auto  grid grid-cols-12 gap-4 md:gap-8">
         <div className="col-span-12 sm:col-span-6 md:col-span-6">
-          <Image
-            src={NextLogo}
-            alt="Boborahim Mashrab"
-            className="   object-cover"
-            width={150}
-            height={150}
-          />
+          <BmLogo width={40} height={40} class="w-10 h-10" />
           <p className="font-mono text-sm mt-8 text-gray-400">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
             eos necessitatibus et doloremque beatae laborum aspernatur,

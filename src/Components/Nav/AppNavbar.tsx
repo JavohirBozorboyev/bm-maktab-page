@@ -1,27 +1,34 @@
-"use client";
 import React from "react";
-import Logo from "@/assets/Logo.png";
-import Image from "next/image";
+
 import Link from "next/link";
 import { AppNavData } from "@/data/AppNavData";
-import NextLogo from "@/../public/next.svg";
-import { useRouter, usePathname } from "next/navigation";
+
 import BmLogo from "@/assets/BmLogo";
+import { useRouter } from "next/router";
 
 type Props = {};
 
 const AppNavbar = (props: Props) => {
-  const path = usePathname();
+  const [open, setOpen] = React.useState(false);
+  const { pathname: path } = useRouter();
+
+  const OpenNavbar = () => {
+    setOpen(!open);
+  };
 
   return (
     <div className="  backdrop-blur-lg bg-white fixed top-0 w-full border-b z-50 ">
-      <div className="container px-4 mx-auto py-4 grid grid-cols-1 md:grid-cols-3 md:px-0 ">
+      <div className="container px-4 mx-auto py-3 md:py-4 grid grid-cols-1 md:grid-cols-3 md:px-0 ">
         <div className=" flex items-center justify-between  ">
           <div className="flex items-center gap-2">
-            <BmLogo width={40} height={40} />
-            <h1 className="text-3xl  text-slate-700 font-mono">Bm-Maktab</h1>
+            <Link href={"/"}>
+              <BmLogo width={40} height={40} class="w-10 h-10" />
+            </Link>
+            <h1 className="text-2xl uppercase  text-slate-700 font-mono">
+              Bm-Maktab
+            </h1>
           </div>
-          <MenuIcon />
+          <MenuIcon onClick={OpenNavbar} open={open} />
         </div>
         <div className="hidden md:grid grid-cols-6 gap-1 p-1 bg-gradient-to-l from-gray-100 to-slate-100 rounded-full ">
           {AppNavData.map((item, i) => {
@@ -64,31 +71,79 @@ const AppNavbar = (props: Props) => {
           </Link>
         </div>
       </div>
+
+      <div
+        className={` bg-white h-screen mt-16 w-full fixed bottom-0 left-[-100%] top-0 p-4 md:hidden z-[1000]  ${
+          open ? "left-[0%]" : ""
+        }`}
+      >
+        <div className=" grid grid-cols-2 items-start  gap-5">
+          {AppNavData.map((item, i) => {
+            return (
+              <Link
+                key={i}
+                href={item.path}
+                className={`text-slate-700 text-base py-1 min-h-20 shadow-[inset_0_0_20px] shadow-gray-200  font-mono flex items-center justify-center rounded-md hover:bg-gray-200 duration-300 ${
+                  path === item.path
+                    ? "text-white bg-yellow-500 hover:bg-yellow-600"
+                    : ""
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
 
 export default AppNavbar;
 
-export const MenuIcon = () => {
+export const MenuIcon = ({
+  onClick,
+  open,
+}: {
+  onClick: () => void;
+  open: boolean;
+}) => {
   return (
     <>
-      <svg
-        clipRule="evenodd"
-        fillRule="evenodd"
-        strokeLinejoin="round"
-        strokeMiterlimit="2"
-        className="w-8 h-8 fill-gray-400 md:hidden"
-        width={24}
-        height={24}
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="m11 16.745c0-.414.336-.75.75-.75h9.5c.414 0 .75.336.75.75s-.336.75-.75.75h-9.5c-.414 0-.75-.336-.75-.75zm-9-5c0-.414.336-.75.75-.75h18.5c.414 0 .75.336.75.75s-.336.75-.75.75h-18.5c-.414 0-.75-.336-.75-.75zm4-5c0-.414.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75h-14.5c-.414 0-.75-.336-.75-.75z"
-          fillRule="nonzero"
-        />
-      </svg>
+      {open ? (
+        <svg
+          clipRule="evenodd"
+          fillRule="evenodd"
+          strokeLinejoin="round"
+          strokeMiterlimit="2"
+          className="w-8 h-8 fill-gray-400 md:hidden"
+          width={24}
+          height={24}
+          onClick={onClick}
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z" />
+        </svg>
+      ) : (
+        <svg
+          clipRule="evenodd"
+          fillRule="evenodd"
+          strokeLinejoin="round"
+          strokeMiterlimit="2"
+          className="w-8 h-8 fill-gray-400 md:hidden"
+          width={24}
+          height={24}
+          onClick={onClick}
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m11 16.745c0-.414.336-.75.75-.75h9.5c.414 0 .75.336.75.75s-.336.75-.75.75h-9.5c-.414 0-.75-.336-.75-.75zm-9-5c0-.414.336-.75.75-.75h18.5c.414 0 .75.336.75.75s-.336.75-.75.75h-18.5c-.414 0-.75-.336-.75-.75zm4-5c0-.414.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75h-14.5c-.414 0-.75-.336-.75-.75z"
+            fillRule="nonzero"
+          />
+        </svg>
+      )}
     </>
   );
 };

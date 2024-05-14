@@ -1,7 +1,5 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
+
 import BmLogo from "@/assets/BmLogo";
 import Link from "next/link";
 
@@ -10,19 +8,18 @@ type Props = {};
 const HomeHero = (props: Props) => {
   return (
     <div className="p-3 md:p-0 container  mx-auto">
-      <div className=" bg-gradient-to-r from-gray-100 to-slate-200 p-6 md:p-10   mx-auto  mt-20 rounded-3xl grid grid-cols-12 gap-5 min-h-[480px] ">
+      <div className=" bg-gradient-to-r from-gray-100 to-slate-200 p-6 md:p-10   mx-auto mt-16 md:mt-20 rounded-xl grid grid-cols-12 gap-5 min-h-[500px] ">
         <div className="  col-span-12 md:col-span-7 flex flex-col gap-8 justify-evenly items-center md:items-start text-center md:text-left ">
-          <h2 className="text-2xl text-slate-700  font-mono ">
+          <h2 className="text-xl md:text-2xl text-slate-700  font-mono ">
             Biz bilan farzandlariz
           </h2>
-          <h1 className="text-6xl  font-mono text-yellow-500">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl  font-mono text-yellow-500">
             Kelajagini yarating
           </h1>
           <p className="text-base font-mono ">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
             accusantium animi dolore? Ipsum blanditiis, iste excepturi modi
-            autem illo! Perspiciatis eaque amet dicta doloribus qui, est unde
-            sunt recusandae perferendis?
+            autem illo!
           </p>
 
           <div className="flex items-center gap-5">
@@ -45,11 +42,7 @@ const HomeHero = (props: Props) => {
           </div>
         </div>
         <div className="col-span-12 md:col-span-5 flex justify-center">
-          <BmLogo
-            width={250}
-            height={250}
-            class="w-96 h-96    hover:-rotate-12 duration-300 animate-logo"
-          />
+          <BmLogo class="w-80 h-80 md:w96 md:h-96    hover:-rotate-12 duration-300 animate-logo" />
         </div>
 
         {/* <div className="homeBg absolute w-full h-full rounded-xl top-0 bottom-0"></div> */}

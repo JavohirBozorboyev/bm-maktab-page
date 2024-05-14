@@ -12,14 +12,14 @@ const HomeTeacherSliderCard = ({ data }: Props) => {
   return (
     <div className=" p-2 rounded-2xl shadow-[inset_0_0_20px] shadow-gray-200 snap-start keen-slider__slide duration-300 ">
       <div className="flex mt-4 flex-col items-center gap-1">
-        <h1 className="text-2xl text-slate-700">{data.name}</h1>
-        <p className="text-gray-400">{data.subject}</p>
+        <h1 className="text-xl md:text-2xl text-slate-700">{data.name}</h1>
+        <p className="text-gray-400 text-sm md:text-base">{data.subject}</p>
       </div>
       <div className="mt-4">
         <img
           src={data.img}
           alt="teacher"
-          className="w-full rounded-xl mt-2 object-cover h-80 "
+          className="w-full rounded-xl mt-2 object-cover h-60 "
         />
       </div>
       <div className="mt-2 flex justify-center items-center gap-2">

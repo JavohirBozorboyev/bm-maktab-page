@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 import React from "react";
 
 type Props = {
@@ -18,16 +18,18 @@ const HomeResultCrad = ({ data }: Props) => {
         </div>
         <div className="col-span-12 md:col-span-6 flex flex-col justify-evenly pr-2 ">
           <div className="flex gap-4 items-center justify-between">
-            <h1 className="text-3xl text-slate-700 font-mono">{data.name}</h1>
-            <p className="text-slate-700 uppercase font-mono text-xl">{`${data.class}-sinf`}</p>
+            <h1 className="text-xl md:text-2xl lg:text-3xl text-slate-700 font-mono">
+              {data.name}
+            </h1>
+            <p className="text-slate-700 uppercase font-mono md:text-base text-sm lg:text-xl">{`${data.class}-sinf`}</p>
           </div>
           <div className="mt-4 flex items-center justify-between">
-            <h2 className="text-yellow-500 text-2xl font-mono">
+            <h2 className="text-yellow-500 text-base sm:text-lg lg:text-2xl font-mono">
               {data.subject}
             </h2>
-            <p className="text-slate-700 font-mono text-xl">{`${data.rating}-O'rin`}</p>
+            <p className="text-slate-700 font-mono text-base lg:text-lg">{`${data.rating}-O'rin`}</p>
           </div>
-          <p className="text-sm text-gray-500 mt-4 text-justify font-mono">
+          <p className="text-sm lg:text-base text-gray-500 mt-4 text-justify font-mono">
             {data.content}
           </p>
 

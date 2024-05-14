@@ -1,4 +1,3 @@
-"use client";
 /* eslint-disable @next/next/no-img-element */
 import PageTitle from "@/Components/PageTitle/PageTitle";
 import { useKeenSlider } from "keen-slider/react";
@@ -58,8 +57,8 @@ const HomeResultSection = ({ data }: Props) => {
           />
         </div>
 
-        <div className="relative container mx-auto">
-          <div ref={sliderRef} className="keen-slider  mt-4">
+        <div className="relative container mx-auto  px-4">
+          <div ref={sliderRef} className="keen-slider  ">
             {data.map((item, index) => {
               return <HomeResultCrad key={index} data={item} />;
             })}
