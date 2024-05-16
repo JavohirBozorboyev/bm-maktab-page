@@ -81,12 +81,13 @@ const AppNavbar = (props: Props) => {
           {AppNavData.map((item, i) => {
             return (
               <Link
+                onClick={OpenNavbar}
                 key={i}
                 href={item.path}
-                className={`text-slate-700 text-base py-1 min-h-20 shadow-[inset_0_0_20px] shadow-gray-200  font-mono flex items-center justify-center rounded-md hover:bg-gray-200 duration-300 ${
+                className={`text-slate-700 text-base py-1 min-h-20  font-mono flex items-center justify-center rounded-md hover:bg-gray-200 duration-300 ${
                   path === item.path
-                    ? "text-white bg-yellow-500 hover:bg-yellow-600"
-                    : ""
+                    ? "text-white bg-yellow-500 active:bg-yellow-600"
+                    : "bg-slate-200"
                 }`}
               >
                 {item.name}

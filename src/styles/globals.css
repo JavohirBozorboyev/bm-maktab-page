@@ -53,3 +53,18 @@
     opacity: 0.7;
   }
 }
+.subjectCard{
+  transition: all .5s ease;
+}
+.subjectCard svg{
+  opacity: 1;
+  position: absolute;
+  top: 35px;
+  right: -150px;
+  transition: all .8s ease;
+  transform: rotate(90deg);
+}
+.subjectCard:hover svg{
+  right: 20px;
+  transform: rotate(0deg);
+}

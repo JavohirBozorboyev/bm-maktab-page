@@ -3,6 +3,7 @@ import HomeHero from "@/PageSection/Home/HomeHero";
 import HomeResultSection from "@/PageSection/Home/HomeResult/HomeResultSection";
 import HomeTeacherSlider from "@/PageSection/Home/HomeSlider/HomeTeacherSlider";
 import HomeTDB from "@/PageSection/Home/HomeTDB/HomeTDB";
+import HomeSubjectList from "@/PageSection/Home/Subjects/HomeSubjectList";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <main>
       <HomeHero />
+      <HomeSubjectList />
       <HomeResultSection data={StudentResult} />
       {/* Teacher Silider */}
 
