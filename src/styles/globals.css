@@ -68,3 +68,16 @@
   right: 20px;
   transform: rotate(0deg);
 }
+
+
+.navlink:hover{
+  transition: all 2s ease;
+}
+.navlink .sel{
+  opacity: 0;
+  visibility: collapse;
+}
+.navlink:hover .sel{
+  opacity: 1;
+  visibility: visible;
+}

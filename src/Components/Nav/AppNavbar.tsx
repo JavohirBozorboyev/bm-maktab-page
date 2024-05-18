@@ -5,21 +5,23 @@ import { AppNavData } from "@/data/AppNavData";
 
 import BmLogo from "@/assets/BmLogo";
 import { useRouter } from "next/router";
+import NavLink from "./NavLink";
+import { IconChevronDown } from "@tabler/icons-react";
 
 type Props = {};
 
 const AppNavbar = (props: Props) => {
   const [open, setOpen] = React.useState(false);
-  const { pathname: path } = useRouter();
+  const router = useRouter();
 
   const OpenNavbar = () => {
     setOpen(!open);
   };
 
   return (
-    <div className="  backdrop-blur-lg bg-white fixed top-0 w-full border-b z-50 ">
-      <div className="container px-4 mx-auto py-3 md:py-4 grid grid-cols-1 md:grid-cols-3 md:px-0 ">
-        <div className=" flex items-center justify-between  ">
+    <div className="  backdrop-blur-lg bg-white fixed top-0 w-full border-b z-[1000] ">
+      <div className="container px-4 mx-auto py-3 md:py-2 grid grid-cols-12 md:px-0 ">
+        <div className=" flex items-center col-span-12 lg:col-span-3 justify-between  ">
           <div className="flex items-center gap-2">
             <Link href={"/"}>
               <BmLogo width={40} height={40} class="w-10 h-10" />
@@ -30,24 +32,18 @@ const AppNavbar = (props: Props) => {
           </div>
           <MenuIcon onClick={OpenNavbar} open={open} />
         </div>
-        <div className="hidden md:grid grid-cols-6 gap-1 p-1 bg-gradient-to-l from-gray-100 to-slate-100 rounded-full ">
-          {AppNavData.map((item, i) => {
+        <div className="col-span-6 hidden lg:flex justify-evenly gap-2 relative ">
+          {AppNavData.map((item) => {
             return (
-              <Link
-                key={i}
-                href={item.path}
-                className={`text-slate-700 text-base py-1 col-span-2 font-mono flex items-center justify-center rounded-full hover:bg-gray-200 duration-300 ${
-                  path === item.path
-                    ? "text-white bg-yellow-500 hover:bg-yellow-600"
-                    : ""
-                }`}
-              >
-                {item.name}
-              </Link>
+              <NavLink
+                key={item.path}
+                link={item}
+                className="flex items-center p-3 font-mono"
+              />
             );
           })}
         </div>
-        <div className="hidden md:flex justify-end  items-center ">
+        <div className="hidden col-span-12 md:col-span-3 lg:flex justify-end  items-center ">
           <Link
             href={"/"}
             className={`text-slate-700 text-base relative  font-mono  overflow-hidden  bg-gradient-to-r from-slate-200 to-gray-200  flex items-center justify-between rounded-full gap-7 hover:from-yellow-500 hover:to-yellow-500 hover:text-white fill-slate-700 hover:fill-white duration-300
@@ -73,25 +69,48 @@ const AppNavbar = (props: Props) => {
       </div>
 
       <div
-        className={` bg-white h-screen mt-16 w-full fixed bottom-0 left-[-100%] top-0 p-4 md:hidden z-[1000]  ${
-          open ? "left-[0%]" : ""
-        }`}
+        className={`fixed bg-white w-full h-screen p-4 ${
+          open ? "block" : "hidden"
+        }  flex-col gap-2 lg:hidden`}
       >
-        <div className=" grid grid-cols-2 items-start  gap-5">
-          {AppNavData.map((item, i) => {
-            return (
+        <div className="container mx-auto flex flex-col gap-2 font-mono">
+          {AppNavData.map((link, id) => {
+            return !link.sub ? (
               <Link
                 onClick={OpenNavbar}
-                key={i}
-                href={item.path}
-                className={`text-slate-700 text-base py-1 min-h-20  font-mono flex items-center justify-center rounded-md hover:bg-gray-200 duration-300 ${
-                  path === item.path
-                    ? "text-white bg-yellow-500 active:bg-yellow-600"
-                    : "bg-slate-200"
+                key={id}
+                href={link.path}
+                className={`cursor-pointer text-lg hover:bg-gray-100 p-2 rounded-sm text-slate-700 ${
+                  router.asPath == link.path && "text-yellow-600"
                 }`}
               >
-                {item.name}
+                {link.name}
               </Link>
+            ) : (
+              <details
+                key={id}
+                className="hover:bg-gray-100 active:bg-gray-100 rounded-sm"
+              >
+                <summary className="cursor-pointer text-lg   p-2 rounded-sm text-slate-700">
+                  {link.name}
+                </summary>
+                <div className="flex flex-col gap-2 pl-8 py-2">
+                  {link.sub?.map((item, i) => {
+                    return (
+                      <Link
+                        onClick={OpenNavbar}
+                        key={i}
+                        href={item.path}
+                        className={`cursor-pointer  hover:bg-white p-2 rounded-sm text-slate-700 ${
+                          router.asPath == item.path && "text-yellow-600"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </details>
             );
           })}
         </div>
@@ -117,7 +136,7 @@ export const MenuIcon = ({
           fillRule="evenodd"
           strokeLinejoin="round"
           strokeMiterlimit="2"
-          className="w-8 h-8 fill-gray-400 md:hidden"
+          className="w-8 h-8 fill-gray-400 lg:hidden"
           width={24}
           height={24}
           onClick={onClick}
@@ -132,7 +151,7 @@ export const MenuIcon = ({
           fillRule="evenodd"
           strokeLinejoin="round"
           strokeMiterlimit="2"
-          className="w-8 h-8 fill-gray-400 md:hidden"
+          className="w-8 h-8 fill-gray-400 lg:hidden"
           width={24}
           height={24}
           onClick={onClick}
