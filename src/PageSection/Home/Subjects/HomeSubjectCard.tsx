@@ -2,10 +2,17 @@
 import React from "react";
 import { SubjectDataType } from "@/data/SubjectData";
 import BmLogo from "@/assets/BmLogo";
-
-const HomeSubjectCard = ({ item }: { item: SubjectDataType }) => {
+import Link from "next/link";
+const HomeSubjectCard = ({
+  item,
+  link,
+}: {
+  item: SubjectDataType;
+  link: string;
+}) => {
   return (
-    <div
+    <Link
+      href={link}
       className={`bg-gradient-to-r hover:scale-[1.02] from-slate-200 to-gray-100 p-3 md:p-5 rounded-xl grid grid-cols-12 items-center overflow-hidden relative subjectCard min-h-40`}
       style={{
         background: `linear-gradient(60deg, rgba(51,65,85,0.7719782913165266) 55%, rgba(234,179,8,0.10688025210084029) 100%), url(${item.img})`,
@@ -21,7 +28,7 @@ const HomeSubjectCard = ({ item }: { item: SubjectDataType }) => {
       <div className="col-span-4 flex justify-end ">
         <BmLogo class="w-24 h-24" />
       </div>
-    </div>
+    </Link>
   );
 };
 

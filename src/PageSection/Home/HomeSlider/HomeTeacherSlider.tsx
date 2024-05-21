@@ -35,6 +35,9 @@ const HomeTeacherSlider = ({ data }: Props) => {
       "(min-width: 1280px)": {
         slides: { perView: 4, spacing: 10 },
       },
+      "(min-width: 1400px)": {
+        slides: { perView: 5, spacing: 10 },
+      },
     },
     slides: { perView: 1 },
     slideChanged(slider) {
@@ -46,7 +49,7 @@ const HomeTeacherSlider = ({ data }: Props) => {
   });
 
   return (
-    <div className=" relative py-10">
+    <div className=" relative py-20">
       <div className="container mx-auto p-4 md:p-0 py-4  flex flex-col items-center ">
         <PageTitle
           title={"Bizning Ustozlar"}

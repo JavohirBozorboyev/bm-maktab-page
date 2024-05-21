@@ -23,12 +23,12 @@ const AppNavbar = (props: Props) => {
       <div className="container px-4 mx-auto py-3 md:py-2 grid grid-cols-12 md:px-0 ">
         <div className=" flex items-center col-span-12 lg:col-span-3 justify-between  ">
           <div className="flex items-center gap-2">
-            <Link href={"/"}>
+            <Link href={"/"} className="flex items-center gap-2">
               <BmLogo width={40} height={40} class="w-10 h-10" />
+              <h1 className="text-2xl uppercase  text-slate-700 font-mono">
+                Bm-Maktab
+              </h1>
             </Link>
-            <h1 className="text-2xl uppercase  text-slate-700 font-mono">
-              Bm-Maktab
-            </h1>
           </div>
           <MenuIcon onClick={OpenNavbar} open={open} />
         </div>

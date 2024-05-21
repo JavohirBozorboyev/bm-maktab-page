@@ -16,8 +16,10 @@ const HomeSubjectList = (props: Props) => {
         />
       </div>
       <div className="container mx-auto py-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
-        {SubjectData.map((item: SubjectDataType) => {
-          return <HomeSubjectCard item={item} key={item.id} />;
+        {SubjectData.map((item, i) => {
+          return (
+            <HomeSubjectCard item={item} key={item.id} link={`/subjects/${i}`} />
+          );
         })}
       </div>
     </div>
