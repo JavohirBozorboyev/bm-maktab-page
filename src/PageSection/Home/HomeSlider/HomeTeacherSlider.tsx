@@ -21,16 +21,16 @@ const HomeTeacherSlider = ({ data }: Props) => {
     loop: false,
     breakpoints: {
       "(min-width: 400px)": {
-        slides: { perView: 1.2, spacing: 10 },
+        slides: { perView: 1, spacing: 10 },
       },
       "(min-width: 640px)": {
-        slides: { perView: 2.2, spacing: 10 },
+        slides: { perView: 2, spacing: 10 },
       },
       "(min-width: 768px)": {
         slides: { perView: 2.5, spacing: 10 },
       },
       "(min-width: 1024px)": {
-        slides: { perView: 3.2, spacing: 10 },
+        slides: { perView: 3, spacing: 10 },
       },
       "(min-width: 1280px)": {
         slides: { perView: 4, spacing: 10 },
@@ -61,14 +61,6 @@ const HomeTeacherSlider = ({ data }: Props) => {
           {data.map((item, i) => {
             return <HomeTeacherSliderCard key={i} data={item} />;
           })}
-          {/* <div className="h-[160px]  backdrop-blur-sm bg-gradient-to-b from-transparent to-gray-100 absolute bottom-0 left-0 right-0 rounded-t-2xl flex items-center justify-center">
-            <Link
-              href={"/"}
-              className="bg-slate-700  p-4 px-8 text-white rounded-lg shadow-[0_5px_15px]  shadow-slate-700 hover:scale-110 duration-300"
-            >
-              {"Barchasini Ko'rish"}
-            </Link>
-          </div> */}
 
           {loaded && instanceRef.current && (
             <>
