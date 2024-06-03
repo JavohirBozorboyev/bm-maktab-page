@@ -13,17 +13,15 @@ const NavLink = ({ link, className }: Props) => {
   const router = useRouter();
   const LinkComp = () => {
     return (
-      <div
+      <Link
+        href={link.path}
         className={`hover:text-yellow-600 duration-300 hover:bg-gray-100 rounded-md text-slate-700 ${className} `}
       >
         {" "}
-        <Link
-          href={link.path}
-          className={`${router.asPath == link.path && "text-yellow-600"}`}
-        >
+        <p className={`${router.asPath == link.path && "text-yellow-600"}`}>
           {link.name}
-        </Link>
-      </div>
+        </p>
+      </Link>
     );
   };
   const LinkSel = () => {

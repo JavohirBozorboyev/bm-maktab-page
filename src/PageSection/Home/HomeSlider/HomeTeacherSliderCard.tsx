@@ -10,12 +10,12 @@ type Props = {
 
 const HomeTeacherSliderCard = ({ data }: Props) => {
   return (
-    <div className=" p-2 rounded-2xl  snap-start keen-slider__slide duration-300 flex flex-col justify-center items-center ">
+    <div className=" rounded-2xl  snap-start keen-slider__slide duration-300 flex flex-col justify-center items-center ">
       <div className="">
         <img
           src={data.img}
           alt="teacher"
-          className="w-52 h-52 rounded-full mt-2 object-cover border-8 border-yellow-500 "
+          className="w-full h-64  object-cover rounded-xl"
         />
       </div>
       <div className="flex mt-4 flex-col items-center gap-1">

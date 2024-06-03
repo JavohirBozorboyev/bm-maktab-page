@@ -25,9 +25,7 @@ const AppNavbar = (props: Props) => {
           <div className="flex items-center gap-2">
             <Link href={"/"} className="flex items-center gap-2">
               <BmLogo width={40} height={40} class="w-10 h-10" />
-              <h1 className="text-2xl uppercase  text-slate-700 font-mono">
-                Bm-Maktab
-              </h1>
+              <h1 className="text-2xl uppercase  text-slate-700 ">Bm-Maktab</h1>
             </Link>
           </div>
           <MenuIcon onClick={OpenNavbar} open={open} />
@@ -38,7 +36,7 @@ const AppNavbar = (props: Props) => {
               <NavLink
                 key={item.path}
                 link={item}
-                className="flex items-center p-3 font-mono"
+                className="flex items-center p-3 "  
               />
             );
           })}
@@ -46,7 +44,7 @@ const AppNavbar = (props: Props) => {
         <div className="hidden col-span-12 md:col-span-3 lg:flex justify-end  items-center ">
           <Link
             href={"/"}
-            className={`text-slate-700 text-base relative  font-mono  overflow-hidden  bg-gradient-to-r from-slate-200 to-gray-200  flex items-center justify-between rounded-full gap-7 hover:from-yellow-500 hover:to-yellow-500 hover:text-white fill-slate-700 hover:fill-white duration-300
+            className={`text-slate-700 text-base relative    overflow-hidden  bg-gradient-to-r from-slate-200 to-gray-200  flex items-center justify-between rounded-full gap-7 hover:from-yellow-500 hover:to-yellow-500 hover:text-white fill-slate-700 hover:fill-white duration-300
               
               `}
           >
@@ -73,7 +71,7 @@ const AppNavbar = (props: Props) => {
           open ? "block" : "hidden"
         }  flex-col gap-2 lg:hidden`}
       >
-        <div className="container mx-auto flex flex-col gap-2 font-mono">
+        <div className="container mx-auto flex flex-col gap-2 ">
           {AppNavData.map((link, id) => {
             return !link.sub ? (
               <Link

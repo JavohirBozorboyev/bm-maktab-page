@@ -1,18 +1,18 @@
 export const AppNavData = [
   {
-    name: "Home",
+    name: "Asosiy Sahifa",
     path: "/",
   },
   {
-    name: "Teacher",
+    name: "Ustozlar",
     path: "/teachers",
   },
   {
-    name: "Student",
-    path: "/students",
+    name: "Natijalar",
+    path: "/results",
   },
   {
-    name: "Subjects",
+    name: "Fanlar",
     path: "/subjects",
     open: false,
     sub: [

@@ -21,7 +21,7 @@ const index = ({ path }: Props) => {
         className={`bg-gradient-to-r  from-slate-200 to-gray-100 min-h-[500px] 2xl:min-h-[700px] flex   `}
       >
         <div className="container mx-auto p-3 md:p-0 flex flex-col items-center justify-center ">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl font-mono text-slate-800 ">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl  text-slate-800 ">
             {data.title}
           </h1>
           <p className="text-sm md:text-base  text-gray-800 w-full md:w-[500px] text-center mt-6">
