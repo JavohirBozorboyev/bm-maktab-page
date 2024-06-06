@@ -4,14 +4,15 @@ import HomeResultSection from "@/PageSection/Home/HomeResult/HomeResultSection";
 import HomeTeacherSlider from "@/PageSection/Home/HomeSlider/HomeTeacherSlider";
 import HomeTDB from "@/PageSection/Home/HomeTDB/HomeTDB";
 import HomeSubjectList from "@/PageSection/Home/Subjects/HomeSubjectList";
+import useSWR from "swr";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({ subject }: any) {
   return (
     <main>
       <HomeHero />
-      <HomeSubjectList />
+      <HomeSubjectList subject={subject} />
       <HomeResultSection data={StudentResult} />
       {/* Teacher Silider */}
 
@@ -93,3 +94,15 @@ const StudentResult = [
     class: 9,
   },
 ];
+
+export async function getStaticProps() {
+  const res = await fetch(`${process.env.ApiUrl}/mainapp/course/`);
+  const subject = await res.json();
+
+  return {
+    props: {
+      subject,
+    },
+    revalidate: 10 * 60,
+  };
+}
