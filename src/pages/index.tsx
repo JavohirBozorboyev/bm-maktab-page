@@ -8,15 +8,16 @@ import useSWR from "swr";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ subject }: any) {
+export default function Home({ subject, studentResult, teacherResult }: any) {
+
   return (
     <main>
       <HomeHero />
       <HomeSubjectList subject={subject} />
-      <HomeResultSection data={StudentResult} />
+      <HomeResultSection data={studentResult} />
       {/* Teacher Silider */}
 
-      <HomeTeacherSlider data={TeacherData} />
+      <HomeTeacherSlider data={teacherResult} />
       <HomeTDB />
     </main>
   );
@@ -97,11 +98,17 @@ const StudentResult = [
 
 export async function getStaticProps() {
   const res = await fetch(`${process.env.ApiUrl}/mainapp/course/`);
+  const student = await fetch(`${process.env.ApiUrl}/mainapp/top-students/`);
+  const teacher = await fetch(`${process.env.ApiUrl}/mainapp/staff/`);
   const subject = await res.json();
+  const studentResult = await student.json();
+  const teacherResult = await teacher.json();
 
   return {
     props: {
       subject,
+      studentResult,
+      teacherResult,
     },
     revalidate: 10 * 60,
   };
