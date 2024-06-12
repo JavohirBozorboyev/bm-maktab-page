@@ -11,12 +11,15 @@
   "dependencies": {
     "@tabler/icons-react": "^3.3.0",
     "axios": "^1.7.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.10",
     "keen-slider": "^6.8.6",
     "next": "14.2.3",
     "next-nprogress-bar": "^2.3.12",
     "react": "^18",
     "react-dom": "^18",
     "swr": "^2.2.5",
+    "tailwind-merge": "^2.3.0",
     "yarn": "^1.22.22"
   },
   "devDependencies": {
