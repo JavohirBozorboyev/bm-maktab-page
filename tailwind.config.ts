@@ -16,6 +16,8 @@ const config: Config = {
       },
       animation: {
         shimmer: "shimmer 8s infinite",
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
+        meteor: "meteor 5s linear infinite",
       },
       keyframes: {
         shimmer: {
@@ -24,6 +26,24 @@ const config: Config = {
           },
           "30%, 60%": {
             "background-position": "calc(100% + var(--shimmer-width)) 0",
+          },
+        },
+        orbit: {
+          "0%": {
+            transform:
+              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform:
+              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-1000px)",
+            opacity: "0",
           },
         },
       },

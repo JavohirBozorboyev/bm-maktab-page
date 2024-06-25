@@ -4,14 +4,14 @@ import BmLogo from "@/assets/BmLogo";
 import Link from "next/link";
 import AnimatedShinyText from "@/Components/magicui/animated-shiny-text";
 import { IconArrowRight, IconBrandInstagram } from "@tabler/icons-react";
-import { cn } from "@/Components/util/utils";
+import { cn } from "@/lib/util/utils";
 
 type Props = {};
 
 const HomeHero = (props: Props) => {
   return (
     <div className="p-3 md:p-0 container  mx-auto ">
-      <div className=" bg-gradient-to-r from-gray-100 to-slate-200 p-6 md:p-10   mx-auto mt-16 md:mt-20 rounded-xl grid grid-cols-12 gap-5 min-h-[500px] ">
+      <div className=" bg-gradient-to-r from-gray-100 to-slate-200 p-6 md:p-10 overflow-hidden relative   mx-auto mt-16 md:mt-20 rounded-xl grid grid-cols-12 gap-5 min-h-[500px] ">
         <div className="  col-span-12 md:col-span-7 flex flex-col gap-8 justify-evenly items-center md:items-start text-center md:text-left ">
           <h2 className="text-xl md:text-2xl text-slate-700   ">
             Biz bilan farzandlariz
@@ -48,8 +48,6 @@ const HomeHero = (props: Props) => {
         <div className="col-span-12 md:col-span-5 flex justify-center">
           <BmLogo class="w-80 h-80 md:w96 md:h-96    hover:-rotate-12 duration-300 animate-logo" />
         </div>
-
-        {/* <div className="homeBg absolute w-full h-full rounded-xl top-0 bottom-0"></div> */}
       </div>
     </div>
   );

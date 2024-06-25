@@ -5,15 +5,17 @@ import HomeTeacherSlider from "@/PageSection/Home/HomeSlider/HomeTeacherSlider";
 import HomeTDB from "@/PageSection/Home/HomeTDB/HomeTDB";
 import HomeSubjectList from "@/PageSection/Home/Subjects/HomeSubjectList";
 import useSWR from "swr";
+import OrbitingCirclesSection from "@/PageSection/Home/OrbitingCirclesSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ subject, studentResult, teacherResult }: any) {
-
   return (
     <main>
       <HomeHero />
+      {/* <OrbitingCirclesSection /> */}
       <HomeSubjectList subject={subject} />
+
       <HomeResultSection data={studentResult} />
       {/* Teacher Silider */}
 
