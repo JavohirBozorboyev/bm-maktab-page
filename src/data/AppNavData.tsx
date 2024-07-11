@@ -7,10 +7,10 @@ export const AppNavData = [
     name: "Ustozlar",
     path: "/teachers",
   },
-  {
-    name: "Natijalar",
-    path: "/results",
-  },
+  // {
+  //   name: "Natijalar",
+  //   path: "/results",
+  // },
   {
     name: "Fanlar",
     path: "/subjects",

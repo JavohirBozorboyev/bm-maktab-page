@@ -36,7 +36,7 @@ const AppNavbar = (props: Props) => {
               <NavLink
                 key={item.path}
                 link={item}
-                className="flex items-center p-3 "  
+                className="flex items-center p-3 "
               />
             );
           })}
@@ -44,32 +44,29 @@ const AppNavbar = (props: Props) => {
         <div className="hidden col-span-12 md:col-span-3 lg:flex justify-end  items-center ">
           <Link
             href={"/"}
-            className={`text-slate-700 text-base relative    overflow-hidden  bg-gradient-to-r from-slate-200 to-gray-200  flex items-center justify-between rounded-full gap-7 hover:from-yellow-500 hover:to-yellow-500 hover:text-white fill-slate-700 hover:fill-white duration-300
-              
+            className={`
+              flex items-center gap-2 text-base  p-2 px-4 rounded-full text-slate-700 bg-gray-100 fill-slate-700 uppercase hover:text-yellow-500 hover:fill-yellow-500 duration-300
               `}
           >
-            <div className="p-2 py-3  rounded-full ml-1 ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="w-4 h-4 "
-              >
-                <path d="M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z" />
-              </svg>
-            </div>
-            <div className="mr-4 ">Contact</div>
-            <div className="p-3  rounded-full bg-white absolute bottom-0 ml-8 -mb-4"></div>
-            <div className="p-3  rounded-full bg-white absolute top-0 ml-8 -mt-4"></div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              className="w-4 h-4 "
+            >
+              <path d="M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z" />
+            </svg>
+
+            <p>+998 90 752 25 00</p>
           </Link>
         </div>
       </div>
 
       <div
-        className={`fixed bg-white w-full h-screen p-4 ${
-          open ? "block" : "hidden"
-        }  flex-col gap-2 lg:hidden`}
+        className={`fixed bg-white w-full h-screen p-4 pb-20 ${
+          open ? "flex" : "hidden"
+        }  flex-col gap-2 justify-between lg:hidden`}
       >
         <div className="container mx-auto flex flex-col gap-2 ">
           {AppNavData.map((link, id) => {
@@ -111,6 +108,26 @@ const AppNavbar = (props: Props) => {
               </details>
             );
           })}
+        </div>
+        <div>
+          <Link
+            href={"/"}
+            className={`
+              flex items-center justify-center gap-2 text-base  p-4 px-4 rounded-xl  text-slate-700 bg-gray-100 fill-slate-700 uppercase hover:text-yellow-500 hover:fill-yellow-500 duration-300
+              `}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              className="w-4 h-4 "
+            >
+              <path d="M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z" />
+            </svg>
+
+            <p>+998 90 752 25 00</p>
+          </Link>
         </div>
       </div>
     </div>
