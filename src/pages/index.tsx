@@ -6,6 +6,7 @@ import HomeTDB from "@/PageSection/Home/HomeTDB/HomeTDB";
 import HomeSubjectList from "@/PageSection/Home/Subjects/HomeSubjectList";
 import useSWR from "swr";
 import OrbitingCirclesSection from "@/PageSection/Home/OrbitingCirclesSection";
+import HomeInfo from "@/PageSection/Home/HomeInfo/HomeInfo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +14,7 @@ export default function Home({ subject, studentResult, teacherResult }: any) {
   return (
     <main>
       <HomeHero />
+      <HomeInfo />
       {/* <OrbitingCirclesSection /> */}
       <HomeSubjectList subject={subject} />
 

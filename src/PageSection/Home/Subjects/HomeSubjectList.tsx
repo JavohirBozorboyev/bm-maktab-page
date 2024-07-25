@@ -15,7 +15,7 @@ const HomeSubjectList = ({ subject }: Props) => {
         <PageTitle
           info="Subjects"
           title="Iqtisoslik Fanlari"
-          content=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto suscipit accusantium exercitationem illum non voluptate quos veniam qui perferendis. "
+          content=" Lorem ipsum dolor sit amet consectetur adipisicing elit."
         />
       </div>
       <div className="container mx-auto py-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
@@ -24,7 +24,7 @@ const HomeSubjectList = ({ subject }: Props) => {
             item: { id: any; title?: string; des?: string; img?: any },
             i: any
           ) => {
-            return <HomeSubjectCard item={item} key={item.id} />;
+            return <HomeSubjectCard item={item} key={i} i={i} />;
           }
         )}
       </div>
