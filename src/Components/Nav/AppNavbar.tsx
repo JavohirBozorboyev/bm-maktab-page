@@ -19,7 +19,7 @@ const AppNavbar = (props: Props) => {
   };
 
   return (
-    <div className="  backdrop-blur-lg bg-white fixed top-0 w-full border-b z-[1000] ">
+    <div className=" bg-white  backdrop-blur-lg  fixed top-0 w-full border-b border-dashed  z-[1000] ">
       <div className="container px-4 mx-auto py-3 md:py-2 grid grid-cols-12 md:px-0 ">
         <div className=" flex items-center col-span-12 lg:col-span-3 justify-between  ">
           <div className="flex items-center gap-2">
@@ -42,10 +42,10 @@ const AppNavbar = (props: Props) => {
           })}
         </div>
         <div className="hidden col-span-12 md:col-span-3 lg:flex justify-end  items-center ">
-          <Link
-            href={"/"}
+          <a
+            href={"tel:+998907522500"}
             className={`
-              flex items-center gap-2 text-base  p-2 px-4 rounded-full text-slate-700 bg-gray-100 fill-slate-700 uppercase hover:text-yellow-500 hover:fill-yellow-500 duration-300
+              flex items-center gap-2 text-base  p-2 px-4 rounded-full text-slate-700 border border-dashed  fill-slate-700 uppercase hover:text-yellow-500 hover:fill-yellow-500 duration-300
               `}
           >
             <svg
@@ -59,7 +59,7 @@ const AppNavbar = (props: Props) => {
             </svg>
 
             <p>+998 90 752 25 00</p>
-          </Link>
+          </a>
         </div>
       </div>
 
@@ -110,8 +110,8 @@ const AppNavbar = (props: Props) => {
           })}
         </div>
         <div>
-          <Link
-            href={"/"}
+          <a
+            href={"tel:+998907522500"}
             className={`
               flex items-center justify-center gap-2 text-base  p-4 px-4 rounded-xl  text-slate-700 bg-gray-100 fill-slate-700 uppercase hover:text-yellow-500 hover:fill-yellow-500 duration-300
               `}
@@ -127,7 +127,7 @@ const AppNavbar = (props: Props) => {
             </svg>
 
             <p>+998 90 752 25 00</p>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

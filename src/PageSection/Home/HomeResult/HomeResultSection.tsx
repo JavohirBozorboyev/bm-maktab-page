@@ -16,75 +16,58 @@ type Props = {
 };
 
 const HomeResultSection = ({ data }: Props) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
-    loop: false,
+    loop: true,
+    mode: "free",
+
     breakpoints: {
       "(min-width: 400px)": {
-        slides: { perView: 1, spacing: 10 },
+        slides: { perView: 1.1, spacing: 10, origin: "center" },
       },
       "(min-width: 640px)": {
-        slides: { perView: 1, spacing: 10 },
+        slides: { perView: 1.2, spacing: 10, origin: "center" },
       },
       "(min-width: 768px)": {
-        slides: { perView: 1, spacing: 10 },
+        slides: { perView: 1.4, spacing: 10, origin: "center" },
       },
       "(min-width: 1024px)": {
-        slides: { perView: 1, spacing: 10 },
+        slides: { perView: 1.4, spacing: 10, origin: "center" },
       },
       "(min-width: 1280px)": {
-        slides: { perView: 1, spacing: 10 },
+        slides: { perView: 1.4, spacing: 10, origin: "center" },
       },
-    },
-    slides: { perView: 1 },
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
-    },
-    created() {
-      setLoaded(true);
+      "(min-width: 1480px)": {
+        slides: { perView: 1.6, spacing: 10, origin: "center" },
+      },
+      "(min-width: 1780px)": {
+        slides: { perView: 1.8, spacing: 10, origin: "center" },
+      },
+      "(min-width: 2000px)": {
+        slides: { perView: 2, spacing: 10, origin: "center" },
+      },
+      "(min-width: 2200px)": {
+        slides: { perView: 2.2, spacing: 10, origin: "center" },
+      },
     },
   });
 
   return (
     <div className="py-10 ">
-      <div className="mx-auto p-4 md:p-0   max-w-5xl ">
+      <div className="mx-auto">
         <div className=" mx-auto   flex flex-col  items-center">
           <PageTitle
             info="Best Students"
-            title="Resultats"
+            title="Natijalar"
             content=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto suscipit accusantium exercitationem illum non voluptate quos veniam qui perferendis. "
           />
         </div>
 
-        <div className="relative container mx-auto  px-4">
+        <div className=" mx-auto   px-4">
           <div ref={sliderRef} className="keen-slider  ">
             {data.map((item, index) => {
               return <HomeResultCrad key={index} data={item} />;
             })}
           </div>
-
-          {loaded && instanceRef.current && (
-            <>
-              <Arrow
-                left
-                onClick={(e: any) =>
-                  e.stopPropagation() || instanceRef.current?.prev()
-                }
-                disabled={currentSlide === 0}
-              />
-
-              <Arrow
-                onClick={(e: any) =>
-                  e.stopPropagation() || instanceRef.current?.next()
-                }
-                disabled={
-                  currentSlide ===
-                  instanceRef.current.track.details.slides.length - 1
-                }
-              />
-            </>
-          )}
         </div>
       </div>
     </div>

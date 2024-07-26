@@ -11,12 +11,12 @@ type Props = {};
 const HomeHero = (props: Props) => {
   return (
     <div className="p-3 md:p-0 container  mx-auto ">
-      <div className=" bg-gradient-to-r from-gray-100 to-slate-200 p-6 md:p-10 overflow-hidden relative   mx-auto mt-16 md:mt-20 rounded-xl grid grid-cols-12 gap-5 min-h-[500px] ">
+      <div className=" bg-slate-200/50 p-6 md:p-10 overflow-hidden relative   mx-auto mt-16 md:mt-20 rounded-xl grid grid-cols-12 gap-5 min-h-[500px] ">
         <div className="  col-span-12 md:col-span-7 flex flex-col gap-8 justify-evenly items-center md:items-start text-center md:text-left ">
           <h2 className="text-xl md:text-2xl text-slate-700   ">
-            Biz bilan farzandlariz
+            Biz bilan farzandlaringiz
           </h2>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl   text-yellow-500">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold   text-yellow-500">
             Kelajagini yarating
           </h1>
           <p className="text-base  ">

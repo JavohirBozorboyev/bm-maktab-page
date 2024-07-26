@@ -12,8 +12,16 @@ const PageTitle = ({ title, info, content }: Props) => {
       {info && (
         <p className="text-sm font-bold  text-gray-400 uppercase">{info}</p>
       )}
-      {title && <h1 className="text-2xl md:text-3xl font-bold text-slate-700">{title}</h1>}
-      {content && <p className="text-gray-400 text-center text-sm md:text-base">{content}</p>}
+      {title && (
+        <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold uppercase text-slate-700">
+          {title}
+        </h1>
+      )}
+      {content && (
+        <p className="text-gray-400 text-center text-sm md:text-base">
+          {content}
+        </p>
+      )}
     </div>
   );
 };

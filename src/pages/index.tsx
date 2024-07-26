@@ -7,6 +7,7 @@ import HomeSubjectList from "@/PageSection/Home/Subjects/HomeSubjectList";
 import useSWR from "swr";
 import OrbitingCirclesSection from "@/PageSection/Home/OrbitingCirclesSection";
 import HomeInfo from "@/PageSection/Home/HomeInfo/HomeInfo";
+import BrandMarquee from "@/PageSection/Home/BrandMarquee/BrandMarquee";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,13 +16,16 @@ export default function Home({ subject, studentResult, teacherResult }: any) {
     <main>
       <HomeHero />
       <HomeInfo />
+      <BrandMarquee type={true} />
       {/* <OrbitingCirclesSection /> */}
       <HomeSubjectList subject={subject} />
-
+      <BrandMarquee type={false} />
       <HomeResultSection data={studentResult} />
       {/* Teacher Silider */}
-
+      <BrandMarquee type={true} />
       <HomeTeacherSlider data={teacherResult} />
+      <BrandMarquee type={false} />
+
       <HomeTDB />
     </main>
   );
