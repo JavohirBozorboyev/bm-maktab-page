@@ -8,7 +8,7 @@ type Props = {
   subject: any;
 };
 
-const HomeSubjectList = ({ subject }: Props) => {
+const HomeSubjectList = ({ subject, }: Props) => {
   return (
     <div className="p-3 py-10">
       <div className=" mx-auto   flex flex-col  items-center">

@@ -37,7 +37,7 @@ const HomeResultCrad = ({ data }: Props) => {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-2 lg:gap-5 mt-5 ">
-            <div className="bg-gradient-to-br from-slate-500 to-slate-700 p-5 rounded-xl relative ">
+            <div className="bg-gradient-to-br from-slate-500 to-slate-700 p-5 rounded-xl relative hover:scale-[0.98] duration-200 ">
               <p className="text-2xl md:text-3xl  xl:text-4xl font-bold text-white">
                 8.0
               </p>
@@ -46,7 +46,7 @@ const HomeResultCrad = ({ data }: Props) => {
               </p>
               <p className="absolute w-4 h-4 top-4 right-4 bg-white rounded-full"></p>
             </div>
-            <div className="bg-gradient-to-br from-yellow-500 to-yellow-600 p-5 rounded-xl relative ">
+            <div className="bg-gradient-to-br from-yellow-500 to-yellow-600 p-5 rounded-xl relative hover:scale-[0.98] duration-200 ">
               <p className="text-2xl md:text-3xl  xl:text-4xl font-bold text-white">
                 C1
               </p>

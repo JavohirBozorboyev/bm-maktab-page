@@ -6,7 +6,7 @@ type Props = {};
 
 const HomeTDB = (props: Props) => {
   return (
-    <div className="pb-10">
+    <div className="py-10">
       <div className="container mx-auto p-4 md:p-0  flex flex-col  items-center">
         <PageTitle
           title="Tadbirlar"

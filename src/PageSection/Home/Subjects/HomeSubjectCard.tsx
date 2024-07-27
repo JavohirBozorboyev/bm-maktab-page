@@ -31,10 +31,6 @@ const HomeSubjectCard = ({ item, i }: { item: any; i: number }) => {
       >
         <IconArrowRight />
       </article>
-
-      {/* <div className="col-span-4 flex justify-end ">
-        <BmLogo class="w-24 h-24" />
-      </div> */}
     </Link>
   );
 };

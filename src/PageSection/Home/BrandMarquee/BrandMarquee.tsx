@@ -1,7 +1,7 @@
 import { cn } from "@/lib/util/utils";
-import Marquee from "./Marquee";
+import Marquee from "../../../Components/magicui/Marquee";
 import BmLogo from "@/assets/BmLogo";
-import { IconDots, IconPoint } from "@tabler/icons-react";
+import { IconPoint } from "@tabler/icons-react";
 
 const ReviewCard = () => {
   return (
@@ -9,7 +9,7 @@ const ReviewCard = () => {
       <div className="flex flex-row items-center gap-2">
         <div className="flex gap-2 items-center">
           <BmLogo class="w-8 h-8" />
-          <p className=" flex items-center gap-1 text-slate-700">
+          <p className=" flex items-center gap-1 text-slate-700 capitalize">
             <IconPoint />
             {`Boborahim Mashrab Maktabi  `}
             <IconPoint />

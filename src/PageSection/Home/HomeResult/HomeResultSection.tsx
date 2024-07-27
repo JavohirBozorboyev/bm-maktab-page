@@ -62,7 +62,7 @@ const HomeResultSection = ({ data }: Props) => {
           />
         </div>
 
-        <div className=" mx-auto   px-4">
+        <div className=" mx-auto">
           <div ref={sliderRef} className="keen-slider  ">
             {data.map((item, index) => {
               return <HomeResultCrad key={index} data={item} />;

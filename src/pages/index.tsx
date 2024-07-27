@@ -4,30 +4,38 @@ import HomeResultSection from "@/PageSection/Home/HomeResult/HomeResultSection";
 import HomeTeacherSlider from "@/PageSection/Home/HomeSlider/HomeTeacherSlider";
 import HomeTDB from "@/PageSection/Home/HomeTDB/HomeTDB";
 import HomeSubjectList from "@/PageSection/Home/Subjects/HomeSubjectList";
-import useSWR from "swr";
 import OrbitingCirclesSection from "@/PageSection/Home/OrbitingCirclesSection";
 import HomeInfo from "@/PageSection/Home/HomeInfo/HomeInfo";
 import BrandMarquee from "@/PageSection/Home/BrandMarquee/BrandMarquee";
+import Head from "next/head";
+import FaqSection from "@/PageSection/Home/FAQ/FaqSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ subject, studentResult, teacherResult }: any) {
   return (
-    <main>
-      <HomeHero />
-      <HomeInfo />
-      <BrandMarquee type={true} />
-      {/* <OrbitingCirclesSection /> */}
-      <HomeSubjectList subject={subject} />
-      <BrandMarquee type={false} />
-      <HomeResultSection data={studentResult} />
-      {/* Teacher Silider */}
-      <BrandMarquee type={true} />
-      <HomeTeacherSlider data={teacherResult} />
-      <BrandMarquee type={false} />
+    <>
+      <Head>
+        <title>Bm-Maktab</title>
+      </Head>
 
-      <HomeTDB />
-    </main>
+      <main>
+        <HomeHero />
+        <HomeInfo />
+        <BrandMarquee type={true} />
+        {/* <OrbitingCirclesSection /> */}
+        <HomeSubjectList subject={subject} />
+        <BrandMarquee type={false} />
+        <HomeResultSection data={studentResult} />
+        {/* Teacher Silider */}
+        <BrandMarquee type={true} />
+        <HomeTeacherSlider data={teacherResult} />
+        <BrandMarquee type={false} />
+
+        <HomeTDB />
+        <FaqSection />
+      </main>
+    </>
   );
 }
 
