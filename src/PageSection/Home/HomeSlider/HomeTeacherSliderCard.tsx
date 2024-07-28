@@ -11,7 +11,7 @@ type Props = {
 const HomeTeacherSliderCard = ({ data }: Props) => {
   return (
     <div className=" rounded-2xl  snap-start keen-slider__slide duration-300 flex flex-col justify-center items-center ">
-      <div className="">
+      <div className="py-2">
         <Image
           src={data.photo}
           alt={data.full_name}
@@ -20,7 +20,7 @@ const HomeTeacherSliderCard = ({ data }: Props) => {
           placeholder="blur"
           loading="lazy"
           blurDataURL={data.photo}
-          className="w-full h-64  object-cover rounded-xl"
+          className="w-full h-64  object-cover rounded-xl outline-1 outline-dashed outline-offset-4 outline-gray-200"
         />
       </div>
       <div className="flex mt-4 flex-col items-center gap-1">

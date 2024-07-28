@@ -15,7 +15,7 @@ const NavLink = ({ link, className }: Props) => {
     return (
       <Link
         href={link.path}
-        className={`hover:text-yellow-600 duration-300 hover:bg-gray-100 rounded-md text-slate-700 ${className} `}
+        className={`hover:text-yellow-600 duration-300 hover:bg-gray-100 rounded-md text-slate-700 active:scale-95 ${className} `}
       >
         {" "}
         <p className={`${router.asPath == link.path && "text-yellow-600"}`}>

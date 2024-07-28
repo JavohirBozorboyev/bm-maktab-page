@@ -25,7 +25,7 @@ const AppNavbar = (props: Props) => {
           <div className="flex items-center gap-2">
             <Link href={"/"} className="flex items-center gap-2">
               <BmLogo width={40} height={40} class="w-10 h-10" />
-              <h1 className="text-2xl uppercase  text-slate-700 ">Bm-Maktab</h1>
+              <h1 className="text-2xl uppercase  text-slate-700 font-semibold ">Bm-Maktab</h1>
             </Link>
           </div>
           <MenuIcon onClick={OpenNavbar} open={open} />
@@ -36,7 +36,7 @@ const AppNavbar = (props: Props) => {
               <NavLink
                 key={item.path}
                 link={item}
-                className="flex items-center p-3 "
+                className="flex items-center p-3  "
               />
             );
           })}
