@@ -64,7 +64,7 @@ const AppNavbar = (props: Props) => {
       </div>
 
       <div
-        className={`fixed bg-white w-full h-screen p-4 pb-20 ${
+        className={`fixed bg-white w-full h-screen p-4 pb-36 ${
           open ? "flex" : "hidden"
         }  flex-col gap-2 justify-between lg:hidden`}
       >
@@ -113,7 +113,7 @@ const AppNavbar = (props: Props) => {
           <a
             href={"tel:+998907522500"}
             className={`
-              flex items-center justify-center gap-2 text-base  p-4 px-4 rounded-xl  text-slate-700 bg-gray-100 fill-slate-700 uppercase hover:text-yellow-500 hover:fill-yellow-500 duration-300
+              flex items-center outline-dashed outline-gray-200 outline-1 outline-offset-2 justify-center gap-2 text-base  p-4 px-4 rounded-xl  text-slate-700 bg-gray-100 fill-slate-700 uppercase hover:text-yellow-500 hover:fill-yellow-500 duration-300
               `}
           >
             <svg

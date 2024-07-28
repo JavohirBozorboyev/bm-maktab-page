@@ -23,11 +23,10 @@ export default function Home({ subject, studentResult, teacherResult }: any) {
         <HomeHero />
         <HomeInfo />
         <BrandMarquee type={true} />
-        {/* <OrbitingCirclesSection /> */}
         <HomeSubjectList subject={subject} />
         <BrandMarquee type={false} />
         <HomeResultSection data={studentResult} />
-        {/* Teacher Silider */}
+
         <BrandMarquee type={true} />
         <HomeTeacherSlider data={teacherResult} />
         <BrandMarquee type={false} />

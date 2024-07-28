@@ -17,6 +17,9 @@ const HomeTeacherSliderCard = ({ data }: Props) => {
           alt={data.full_name}
           width={300}
           height={300}
+          placeholder="blur"
+          loading="lazy"
+          blurDataURL={data.photo}
           className="w-full h-64  object-cover rounded-xl"
         />
       </div>

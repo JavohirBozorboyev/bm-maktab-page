@@ -3,7 +3,7 @@ import React from "react";
 
 const FaqSection = () => {
   return (
-    <div className="container mx-auto py-20">
+    <div className="container mx-auto pb-8">
       <div className="flex justify-center">
         <PageTitle
           title="Faq"
@@ -21,7 +21,7 @@ const FaqSection = () => {
                 <p className="col-span-11 text-base sm:text-lg  lg:text-xl xl:text-2xl">{item.title} </p>
                 <div className="col-span-1 flex justify-end">
                   <span
-                    className={` w-7 h-7 flex items-center justify-center text-white text-base rounded-full  animate-pulse ${item.color}`}
+                    className={` w-7 h-7 flex items-center justify-center text-white text-base rounded-full  animate-pulse outline-dashed outline-1 outline-offset-2 outline-gray-300 ${item.color}`}
                   >
                     {i + 1}
                   </span>

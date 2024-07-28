@@ -22,19 +22,19 @@ const HomeResultSection = ({ data }: Props) => {
 
     breakpoints: {
       "(min-width: 400px)": {
-        slides: { perView: 1.1, spacing: 10, origin: "center" },
+        slides: { perView: 1.2, spacing: 10, origin: "center" },
       },
       "(min-width: 640px)": {
         slides: { perView: 1.2, spacing: 10, origin: "center" },
       },
       "(min-width: 768px)": {
-        slides: { perView: 1.4, spacing: 10, origin: "center" },
+        slides: { perView: 1.3, spacing: 10, origin: "center" },
       },
       "(min-width: 1024px)": {
         slides: { perView: 1.4, spacing: 10, origin: "center" },
       },
       "(min-width: 1280px)": {
-        slides: { perView: 1.4, spacing: 10, origin: "center" },
+        slides: { perView: 1.5, spacing: 10, origin: "center" },
       },
       "(min-width: 1480px)": {
         slides: { perView: 1.6, spacing: 10, origin: "center" },

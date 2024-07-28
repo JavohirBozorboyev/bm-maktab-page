@@ -5,12 +5,12 @@ type Props = {};
 const HomeInfo = (props: Props) => {
   return (
     <div className="mt-10 py-10">
-      <div className="container px-3 lg:px-0  mx-auto grid grid-cols-12 gap-5  ">
+      <div className="container px-3 lg:px-0  mx-auto grid grid-cols-12 gap-3 lg:p-5 items-stretch  ">
         {data.map((item, i) => {
           return (
             <div
               key={i}
-              className="col-span-12 md:col-span-6 lg:col-span-3 relative"
+              className="col-span-6 md:col-span-6 lg:col-span-3"
             >
               <div
                 className={`bg-white border border-dashed  p-4 lg:p-6 xl:p-8 rounded-xl relative z-10 hover:scale-[1.03]  duration-300`}
@@ -39,7 +39,7 @@ export default HomeInfo;
 const data = [
   {
     title: "13+",
-    content: "Yillik tajriba",
+    content: "Yillik tajriba va ishonch",
     color: "bg-yellow-200",
     border: "border-yellow-200",
   },
