@@ -4,6 +4,8 @@ import { useKeenSlider } from "keen-slider/react";
 import React, { useState } from "react";
 import "keen-slider/keen-slider.min.css";
 import HomeResultCrad from "./HomeResultCrad";
+import { IconArrowRight } from "@tabler/icons-react";
+import Link from "next/link";
 
 type Props = {
   data: {
@@ -68,6 +70,16 @@ const HomeResultSection = ({ data }: Props) => {
               return <HomeResultCrad key={index} data={item} />;
             })}
           </div>
+        </div>
+
+        <div className="mt-20 mb-10 w-full flex justify-center">
+          <Link
+            href={"/results"}
+            className="border border-dashed p-3 rounded-xl px-8 flex  items-center gap-2 hover:border-slate-700  text-gray-400  uppercase hover:text-slate-700 active:scale-95 duration-300 "
+          >
+            Barcha natijalar
+            <IconArrowRight className="animate-pulse" />
+          </Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import {
-  IconArrowRight,
   IconBrandFacebook,
   IconBrandInstagram,
   IconBrandTelegram,
@@ -17,7 +16,7 @@ const TeacherCard = ({ item }: Props) => {
     <div className="border border-dashed w-full min-h-40 p-3 lg:p-4 rounded-xl hover:border-yellow-600 duration-300 cardAnim ">
       <img
         src={item.photo}
-        alt=""
+        alt={`${item.full_name}`}
         className="rounded-lg w-full h-72 object-cover"
       />
       <div className="flex flex-col gap-2 py-4">
