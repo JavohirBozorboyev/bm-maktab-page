@@ -54,34 +54,39 @@ const HomeResultSection = ({ data }: Props) => {
   });
 
   return (
-    <div className="py-10 " id="results">
-      <div className="mx-auto">
-        <div className=" mx-auto   flex flex-col  items-center">
-          <PageTitle
-            info="Best Students"
-            title="Natijalar"
-            content=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto suscipit accusantium exercitationem illum non voluptate quos veniam qui perferendis. "
-          />
-        </div>
+    <div className="relative overflow-hidden">
+      <div className="py-10 backdrop-blur-md z-10 relative " id="results">
+        <div className="mx-auto">
+          <div className=" mx-auto   flex flex-col  items-center">
+            <PageTitle
+              info="Best Students"
+              title="Natijalar"
+              content=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto suscipit accusantium exercitationem illum non voluptate quos veniam qui perferendis. "
+            />
+          </div>
 
-        <div className=" mx-auto">
-          <div ref={sliderRef} className="keen-slider  ">
-            {data.map((item, index) => {
-              return <HomeResultCrad key={index} data={item} />;
-            })}
+          <div className=" mx-auto">
+            <div ref={sliderRef} className="keen-slider  ">
+              {data.map((item, index) => {
+                return <HomeResultCrad key={index} data={item} />;
+              })}
+            </div>
+          </div>
+
+          <div className="mt-20 mb-10 w-full flex justify-center">
+            <Link
+              href={"/results"}
+              className="border border-dashed p-3 rounded-xl px-8 flex  items-center gap-2 hover:border-slate-700  text-gray-400  uppercase hover:text-slate-700 active:scale-95 duration-300 "
+            >
+              Barcha natijalar
+              <IconArrowRight className="animate-pulse" />
+            </Link>
           </div>
         </div>
-
-        <div className="mt-20 mb-10 w-full flex justify-center">
-          <Link
-            href={"/results"}
-            className="border border-dashed p-3 rounded-xl px-8 flex  items-center gap-2 hover:border-slate-700  text-gray-400  uppercase hover:text-slate-700 active:scale-95 duration-300 "
-          >
-            Barcha natijalar
-            <IconArrowRight className="animate-pulse" />
-          </Link>
-        </div>
       </div>
+      <article className="absolute text-[16rem] lg:text-[20rem] top-0 left-0 z-0 text-gray-400">
+        04
+      </article>
     </div>
   );
 };
