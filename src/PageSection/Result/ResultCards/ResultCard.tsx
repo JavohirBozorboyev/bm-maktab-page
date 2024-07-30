@@ -25,7 +25,7 @@ const ResultCard = ({ item }: Props) => {
           English
         </p>
       </div>
-      <div className="col-span-12 xl:col-span-6 flex flex-col justify-between gap-0">
+      <div className="col-span-12 xl:col-span-6 flex flex-col justify-between gap-2">
         <h1 className="text-xl lg:text-2xl text-slate-700">{item.full_name}</h1>
         <p className="text-sm  text-gray-400 line-clamp-5 ">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
@@ -34,7 +34,7 @@ const ResultCard = ({ item }: Props) => {
           voluptates, vel animi reprehenderit!
         </p>
 
-        <div className="flex gap-1 items-end justify-between">
+        <div className="flex gap-1 items-end justify-between mt-2 xl:mt-0">
           <article className="flex items-center gap-1">
             <div className="bg-gradient-to-br from-slate-500 to-slate-700 p-3 rounded-xl relative hover:scale-[0.98] duration-200 ">
               <p className="text-base font-bold text-white">8.0</p>

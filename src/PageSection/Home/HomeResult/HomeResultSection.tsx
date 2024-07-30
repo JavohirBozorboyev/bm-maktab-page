@@ -54,7 +54,7 @@ const HomeResultSection = ({ data }: Props) => {
   });
 
   return (
-    <div className="py-10 ">
+    <div className="py-10 " id="results">
       <div className="mx-auto">
         <div className=" mx-auto   flex flex-col  items-center">
           <PageTitle

@@ -23,9 +23,7 @@ const HomeInfo = (props: Props) => {
                   className={`absolute w-4 h-4  ${item.color}  rounded-full top-5 right-5 animate-pulse`}
                 ></span>
               </div>
-              {/* <div
-                className={`absolute -top-3 ${item.color}  h-10  left-2 right-2 -z-10 rounded-t-xl overflow-hidden flex gap-2  `}
-              ></div> */}
+             
             </div>
           );
         })}

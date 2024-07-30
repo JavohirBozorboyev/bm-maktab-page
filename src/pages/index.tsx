@@ -9,6 +9,8 @@ import HomeInfo from "@/PageSection/Home/HomeInfo/HomeInfo";
 import BrandMarquee from "@/PageSection/Home/BrandMarquee/BrandMarquee";
 import Head from "next/head";
 import FaqSection from "@/PageSection/Home/FAQ/FaqSection";
+import HomeTarget from "@/PageSection/Home/HomeInfo/HomeTarget";
+import HomePreorty from "@/PageSection/Home/HomeInfo/HomePreorty";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +24,8 @@ export default function Home({ subject, studentResult, teacherResult }: any) {
       <main>
         <HomeHero />
         <HomeInfo />
+        <HomePreorty />
+        {/* <HomeTarget /> */}
         <BrandMarquee type={true} />
         <HomeSubjectList subject={subject} />
         <BrandMarquee type={false} />
