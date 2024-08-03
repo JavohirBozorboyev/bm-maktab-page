@@ -6,7 +6,7 @@ import { AppNavData } from "@/data/AppNavData";
 import BmLogo from "@/assets/BmLogo";
 import { useRouter } from "next/router";
 import NavLink from "./NavLink";
-import { IconChevronDown } from "@tabler/icons-react";
+import { IconPhoneFilled } from "@tabler/icons-react";
 
 type Props = {};
 
@@ -19,63 +19,66 @@ const AppNavbar = (props: Props) => {
   };
 
   return (
-    <div className=" bg-white  backdrop-blur-lg  fixed top-0 w-full border-b border-dashed  z-[1000] ">
-      <div className="container px-4 mx-auto py-3 md:py-2 grid grid-cols-12 md:px-0 ">
-        <div className=" flex items-center col-span-12 lg:col-span-3 justify-between  ">
-          <div className="flex items-center gap-2">
-            <Link href={"/"} className="flex items-center gap-2">
-              <BmLogo width={40} height={40} class="w-10 h-10" />
-              <h1 className="text-2xl uppercase  text-slate-700 font-semibold ">Bm-Maktab</h1>
-            </Link>
+    <div>
+      <div className="   backdrop-blur-lg  fixed top-0 w-full border-b border-dashed  z-[1000] ">
+        <div className="container px-4 mx-auto py-3 md:py-2 grid grid-cols-12 md:px-0 ">
+          <div className=" flex items-center col-span-12 lg:col-span-3 justify-between  ">
+            <div className="flex items-center gap-2">
+              <Link href={"/"} className="flex items-center gap-2">
+                <BmLogo width={40} height={40} class="w-10 h-10" />
+                <h1 className="text-2xl uppercase  text-slate-700 font-semibold ">
+                  Bm-Maktab
+                </h1>
+              </Link>
+            </div>
+            <MenuIcon onClick={OpenNavbar} open={open} />
           </div>
-          <MenuIcon onClick={OpenNavbar} open={open} />
-        </div>
-        <div className="col-span-6 hidden lg:flex justify-evenly gap-2 relative ">
-          {AppNavData.map((item) => {
-            return (
-              <NavLink
-                key={item.path}
-                link={item}
-                className="flex items-center p-3  "
-              />
-            );
-          })}
-        </div>
-        <div className="hidden col-span-12 md:col-span-3 lg:flex justify-end  items-center ">
-          <a
-            href={"tel:+998907522500"}
-            className={`
+          <div className="col-span-6 hidden lg:flex justify-evenly gap-2 relative ">
+            {AppNavData.map((item) => {
+              return (
+                <NavLink
+                  key={item.path}
+                  link={item}
+                  className="flex items-center p-3  "
+                />
+              );
+            })}
+          </div>
+          <div className="hidden col-span-12 md:col-span-3 lg:flex justify-end  items-center ">
+            <a
+              href={"tel:+998907522500"}
+              className={`
               flex items-center gap-2 text-base  p-2 px-4 rounded-full text-slate-700 border border-dashed  fill-slate-700 uppercase hover:text-yellow-500 hover:fill-yellow-500 duration-300
               `}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="w-4 h-4 "
             >
-              <path d="M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z" />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="w-4 h-4 "
+              >
+                <path d="M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z" />
+              </svg>
 
-            <p>+998 90 752 25 00</p>
-          </a>
+              <p>+998 90 752 25 00</p>
+            </a>
+          </div>
         </div>
       </div>
-
       <div
-        className={`fixed bg-white w-full h-screen p-4 pb-36 ${
+        className={`fixed bg-white top-0 z-40 w-full h-screen p-4 py-20 ${
           open ? "flex" : "hidden"
         }  flex-col gap-2 justify-between lg:hidden`}
       >
-        <div className="container mx-auto flex flex-col gap-2 ">
+        <div className="container mx-auto flex flex-col gap-2 items-center justify-center h-full ">
           {AppNavData.map((link, id) => {
             return !link.sub ? (
               <Link
                 onClick={OpenNavbar}
                 key={id}
                 href={link.path}
-                className={`cursor-pointer text-lg hover:bg-gray-100 p-2 rounded-sm text-slate-700 ${
+                className={`cursor-pointer text-2xl hover:bg-gray-100 p-2 rounded-sm text-slate-700 ${
                   router.asPath == link.path && "text-yellow-600"
                 }`}
               >
@@ -90,7 +93,7 @@ const AppNavbar = (props: Props) => {
                   {link.name}
                 </summary>
                 <div className="flex flex-col gap-2 pl-8 py-2">
-                  {link.sub?.map((item, i) => {
+                  {link.sub?.map((item: any, i: number) => {
                     return (
                       <Link
                         onClick={OpenNavbar}
@@ -109,25 +112,15 @@ const AppNavbar = (props: Props) => {
             );
           })}
         </div>
-        <div>
-          <a
+        <div className=" w-full">
+          <Link
             href={"tel:+998907522500"}
             className={`
-              flex items-center outline-dashed outline-gray-200 outline-1 outline-offset-2 justify-center gap-2 text-base  p-4 px-4 rounded-xl  text-slate-700 bg-gray-100 fill-slate-700 uppercase hover:text-yellow-500 hover:fill-yellow-500 duration-300
-              `}
+           flex items-center outline-dashed outline-gray-200 outline-1 outline-offset-2 justify-center gap-2 text-2xl  p-4 px-4 rounded-xl  text-slate-700 bg-gray-100 fill-slate-700 uppercase hover:text-yellow-500 hover:fill-yellow-500 duration-300
+           `}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="w-4 h-4 "
-            >
-              <path d="M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z" />
-            </svg>
-
             <p>+998 90 752 25 00</p>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -151,7 +144,7 @@ export const MenuIcon = ({
           fillRule="evenodd"
           strokeLinejoin="round"
           strokeMiterlimit="2"
-          className="w-8 h-8 fill-gray-400 lg:hidden"
+          className="w-8 h-8 fill-slate-700 lg:hidden"
           width={24}
           height={24}
           onClick={onClick}
@@ -166,7 +159,7 @@ export const MenuIcon = ({
           fillRule="evenodd"
           strokeLinejoin="round"
           strokeMiterlimit="2"
-          className="w-8 h-8 fill-gray-400 lg:hidden"
+          className="w-8 h-8 fill-slate-700 lg:hidden"
           width={24}
           height={24}
           onClick={onClick}

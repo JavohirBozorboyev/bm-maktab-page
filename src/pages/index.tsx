@@ -26,6 +26,7 @@ export default function Home({ subject, studentResult, teacherResult }: any) {
         <HomeInfo />
         <HomePreorty />
         {/* <HomeTarget /> */}
+
         <BrandMarquee type={true} />
         <HomeSubjectList subject={subject} />
         <BrandMarquee type={false} />
