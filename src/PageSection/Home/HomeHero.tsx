@@ -7,12 +7,15 @@ import { IconArrowRight, IconBrandInstagram } from "@tabler/icons-react";
 import { cn } from "@/lib/util/utils";
 import Image from "next/image";
 import Rasim from "@/assets/bg.png";
+import BrandMarquee from "./BrandMarquee/BrandMarquee";
+import Marquee from "@/Components/magicui/Marquee";
+import { type } from "os";
 
 type Props = {};
 
 const HomeHero = (props: Props) => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden py-10">
       <div className="relative overflow-hidden backdrop-blur-xl">
         <div className="container px-3 lg:px-0  mx-auto relative z-10 pt-28 pb-10   grid grid-cols-12 gap-y-12 gap-5 items-stretch">
           <div className="col-span-12 md:col-span-6 flex flex-col gap-5 items-start ">
@@ -81,7 +84,7 @@ const HomeHero = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="h-[400px] w-[400px] bg-gradient-to-tr from-slate-300 to-slate-200 absolute top-0 -z-10 rotate-45 rounded-full animate-pulse left-[-15%]"></div>
+      <div className="h-[400px] w-[400px] bg-gradient-to-tr from-slate-300 to-slate-200 absolute -top-10 -z-10 rotate-45 rounded-full animate-pulse left-[-15%]"></div>
       <div className="h-[300px] w-[300px] bg-gradient-to-tr from-yellow-200 to-yellow-100 absolute bottom-10 lg:top-10 -z-10 rotate-45 rounded-full animate-pulse right-[-10%] opacity-30"></div>
     </div>
   );

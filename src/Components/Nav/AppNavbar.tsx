@@ -73,6 +73,20 @@ const AppNavbar = (props: Props) => {
       >
         <div className="container mx-auto flex flex-col gap-2 items-center justify-center h-full ">
           {AppNavData.map((link, id) => {
+            return (
+              <Link
+                onClick={OpenNavbar}
+                key={id}
+                href={link.path}
+                className={`cursor-pointer text-2xl hover:bg-gray-100 p-2 rounded-sm text-slate-700 ${
+                  router.asPath == link.path && "text-yellow-600"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
+          {/* {AppNavData.map((link, id) => {
             return !link.sub ? (
               <Link
                 onClick={OpenNavbar}
@@ -110,7 +124,7 @@ const AppNavbar = (props: Props) => {
                 </div>
               </details>
             );
-          })}
+          })} */}
         </div>
         <div className=" w-full">
           <Link
