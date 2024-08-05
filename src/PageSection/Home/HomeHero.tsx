@@ -15,18 +15,18 @@ type Props = {};
 
 const HomeHero = (props: Props) => {
   return (
-    <div className="relative overflow-hidden py-10">
+    <div className="relative overflow-hidden ">
       <div className="relative overflow-hidden backdrop-blur-xl">
-        <div className="container px-3 lg:px-0  mx-auto relative z-10 pt-28 pb-10   grid grid-cols-12 gap-y-12 gap-5 items-stretch">
+        <div className="container pb-10 pt-24 px-3 lg:px-0  mx-auto relative z-10 grid grid-cols-12 gap-y-12 gap-5 items-center">
           <div className="col-span-12 md:col-span-6 flex flex-col gap-5 items-start ">
-            <h2 className="text-xl uppercase text-slate-600">
+            <h2 className="text-xl lg:text-2xl uppercase text-slate-600">
               Eng yaxshi imkoniyat
             </h2>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-4  text-slate-700 uppercase ">
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl my-4  text-slate-700 uppercase ">
               Biz bilan eng <span className="text-yellow-500">Yaxshi</span>{" "}
               natijalarga erish ✨
             </h1>
-            <p className="text-gray-400 border-l-2 border-dashed pl-4 border-slate-500">
+            <p className="text-gray-400 border-l-2 border-dashed pl-4 border-slate-500 text-sm lg:text-base">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
               vero ducimus ut quaerat, nihil cupiditate corporis nulla ipsum
               consequatur distinctio architecto fugit, sit ab mollitia, quia
@@ -56,33 +56,25 @@ const HomeHero = (props: Props) => {
               </Link>
             </div>
           </div>
-          <div className="col-span-12 md:col-span-6 relative">
+          <div className="col-span-12 md:col-span-6 relative grid grid-cols-12 gap-4">
             <Image
               src={Rasim}
               alt=""
-              className=" w-full h-full rounded-xl outline-1 outline-dashed outline-offset-4 outline-gray-200"
+              className=" col-span-8 w-full h-full rounded-xl object-cover outline-1 outline-dashed outline-offset-4 outline-gray-200"
+            />
+            <Image
+              src={Rasim}
+              alt=""
+              className=" col-span-4 w-full h-full rounded-xl object-cover outline-1 outline-dashed outline-offset-4 outline-gray-200"
+            />
+            <Image
+              src={Rasim}
+              alt=""
+              className=" col-span-12 w-full max-h-60 object-cover rounded-xl outline-1 outline-dashed outline-offset-4 outline-gray-200"
             />
 
-            <span className="backdrop-blur-3xl cursor-pointer absolute -top-2 -left-8 p-2 rounded-full font-light text-yellow-300 outline-dashed outline-1 animate-pulse opacity-70 -rotate-12 outline-yellow-300 px-3 uppercase text-sm">
-              # Dasturlash
-            </span>
-            <span className="backdrop-blur-3xl cursor-pointer absolute -top-5 -right-0 p-2 rounded-full font-light text-yellow-300 outline-dashed outline-1 animate-pulse opacity-70 rotate-6 outline-yellow-300 px-3 uppercase text-sm">
-              # Ingliz-tili
-            </span>
-            <span className="backdrop-blur-3xl cursor-pointer absolute -bottom-0 -left-2 p-2 rounded-full font-light text-yellow-300 outline-dashed outline-1 animate-pulse opacity-70 -rotate-2 outline-yellow-300 px-3 uppercase text-sm">
-              # Matematika
-            </span>
-            <span className="backdrop-blur-3xl cursor-pointer absolute -bottom-5 -right-0 p-2 rounded-full font-light text-yellow-300 outline-dashed outline-1 animate-pulse opacity-70 rotate-45 outline-yellow-300 px-3 uppercase text-sm">
-              # Rustili
-            </span>
-            <span className="backdrop-blur-3xl cursor-pointer absolute bottom-20 lg:bottom-44 -right-0 p-2 rounded-full font-light text-yellow-300 outline-dashed outline-1 animate-pulse opacity-70 -rotate-45 outline-yellow-300 px-3 uppercase text-sm">
-              # Kimyo
-            </span>
-            <span className="backdrop-blur-3xl cursor-pointer absolute -bottom-0 right-32 p-2 rounded-full font-light text-yellow-300 outline-dashed outline-1 animate-pulse opacity-70 rotate-6 outline-yellow-300 px-3 uppercase text-sm">
-              # Bialogiya
-            </span>
-            <div className="absolute -top-20 -left-20 -z-10">
-              <BmLogo class="w-44 h-44  opacity-10  -rotate-12 " />
+            <div className="absolute -top-40 -right-10 -z-10 lg:-left-20 lg:-top-10 xl:-left-24">
+              <BmLogo class="w-44 h-44  opacity-5  -rotate-12 " />
             </div>
           </div>
         </div>

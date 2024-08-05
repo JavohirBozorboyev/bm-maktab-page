@@ -24,7 +24,7 @@ const HomeSubjectList = ({ subject }: Props) => {
           />
         </div>
         <div className=" container mx-auto grid grid-cols-12 lg:gap-10 items-center ">
-          <div className="  col-span-12 lg:col-span-7 mt-10 py-5 grid grid-cols-1 lg:grid-cols-2 gap-5">
+          <div className="  col-span-12 lg:col-span-7 mt-10 py-5 grid grid-cols-1 md:grid-cols-2 gap-5">
             {subject.map(
               (
                 item: { id: any; title?: string; des?: string; img?: any },
@@ -63,7 +63,9 @@ const HomeSubjectList = ({ subject }: Props) => {
       <article className="absolute text-[16rem] lg:text-[20rem] -top-20   right-0 z-0 text-gray-400">
         01
       </article>
-      <article className="absolute border-[3px] border-yellow-500 w-[700px] mx-auto h-[700px] bottom-[-70%]  rounded-full opacity-50 animate-pulse"></article>
+      <div className="flex justify-center">
+        <article className="absolute border-[3px] border-yellow-500 w-[700px] mx-auto h-[700px] bottom-[-70%]  rounded-full opacity-50 animate-pulse"></article>
+      </div>
       <article className="absolute left-[-60%] lg:left-[-20%] top-10 w-96 h-96 bg-gradient-to-tr from-blue-200 to-teal-200 opacity-30 rounded-full animate-pulse"></article>
     </div>
   );

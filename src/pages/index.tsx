@@ -4,13 +4,13 @@ import HomeResultSection from "@/PageSection/Home/HomeResult/HomeResultSection";
 import HomeTeacherSlider from "@/PageSection/Home/HomeSlider/HomeTeacherSlider";
 import HomeTDB from "@/PageSection/Home/HomeTDB/HomeTDB";
 import HomeSubjectList from "@/PageSection/Home/Subjects/HomeSubjectList";
-import OrbitingCirclesSection from "@/PageSection/Home/OrbitingCirclesSection";
 import HomeInfo from "@/PageSection/Home/HomeInfo/HomeInfo";
 import BrandMarquee from "@/PageSection/Home/BrandMarquee/BrandMarquee";
 import Head from "next/head";
 import FaqSection from "@/PageSection/Home/FAQ/FaqSection";
 import HomeTarget from "@/PageSection/Home/HomeInfo/HomeTarget";
 import HomePreorty from "@/PageSection/Home/HomeInfo/HomePreorty";
+import WeekExamSection from "@/PageSection/Home/Exam/WeekExamSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,11 +25,10 @@ export default function Home({ subject, studentResult, teacherResult }: any) {
         <HomeHero />
         <HomeInfo />
         <HomePreorty />
-        {/* <HomeTarget /> */}
-
         <BrandMarquee type={true} />
         <HomeSubjectList subject={subject} />
         <BrandMarquee type={false} />
+        <WeekExamSection />
         <HomeResultSection data={studentResult} />
 
         <BrandMarquee type={true} />

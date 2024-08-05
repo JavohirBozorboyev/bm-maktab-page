@@ -1,11 +1,17 @@
+import { IconArrowDown, IconCaretDownFilled } from "@tabler/icons-react";
 import React from "react";
 
 type Props = {};
 
 const HomeInfo = (props: Props) => {
   return (
-    <div className="py-10 bg-gradient-to-bl from-slate-600 to-slate-700 relative">
-      <div className="container px-3 lg:px-0  mx-auto grid grid-cols-12 gap-3 lg:p-5 items-stretch  ">
+    <div className="py-10 bg-gradient-to-bl from-slate-600 to-slate-700 relative mx-2 rounded-md">
+      <article className="flex justify-center items-center ">
+        <div className="absolute -top-8 bg-white w-16 h-16  rounded-full flex items-center justify-center cursor-pointer">
+          <IconCaretDownFilled className="text-slate-700 animate-bounce mt-4" />
+        </div>
+      </article>
+      <div className="container px-3 lg:px-0  mx-auto grid grid-cols-12 gap-3 lg:p-5 items-stretch mt-6  ">
         {data.map((item, i) => {
           return (
             <div key={i} className="col-span-6 md:col-span-6 lg:col-span-3">
