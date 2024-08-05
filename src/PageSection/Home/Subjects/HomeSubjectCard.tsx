@@ -2,36 +2,29 @@
 import React from "react";
 import Link from "next/link";
 import { IconArrowRight } from "@tabler/icons-react";
+import Image from "next/image";
 const HomeSubjectCard = ({ item, i }: { item: any; i: number }) => {
-  const color = [
-    "text-blue-300",
-    "text-green-300",
-    "text-yellow-300",
-    "text-red-300",
-    "text-orange-300",
-    "text-teal-300",
-    "text-pink-300",
-    "text-violet-300",
-    "text-purple-300",
+  const Color = [
+    "outline-blue-300 bg-blue-300/50",
+    "outline-green-300 bg-green-300/50",
+    "outline-yellow-300 bg-yellow-300/50",
+    "outline-sky-300 bg-sky-300/50",
+    "outline-indigo-300 bg-indigo-300/50",
+    "outline-teal-300 bg-teal-300/50",
+    "outline-pink-300 bg-pink-300/50",
+    "outline-violet-300 bg-violet-300/50",
+    "outline-purple-300 bg-purple-300/50",
   ];
 
   return (
-    <Link
-      href={`/subjects/${item.slug}`}
-      className={` border  border-gray-100 border-dashed hover:scale-[1.02] duration-300  rounded-xl grid grid-cols-12 gap-2 items-center overflow-hidden relative  p-4 lg:p-6 `}
+    <div
+      className={` outline-dashed outline-1 outline-offset-2  hover:scale-[1.02] duration-300  rounded-xl  items-center  relative  p-4  ${Color[i]}`}
     >
-      <div className="flex flex-col gap-2 col-span-12 ">
-        <h1 className="text-2xl text-slate-700  uppercase">{item.name}</h1>
-        <p className="text-sm text-gray-400 font-light text-wrap line-clamp-2">
-          {item.about}...
-        </p>
-      </div>
-      <article
-        className={`absolute  rounded-full ${color[i]} top-5 right-5 animate-pulse `}
-      >
-        <IconArrowRight />
-      </article>
-    </Link>
+      <h1 className="text-2xl text-white  uppercase font-bold">{item.name}</h1>
+      <p className="text-sm text-slate-600 font-light text-wrap line-clamp-4">
+        {item.about}
+      </p>
+    </div>
   );
 };
 

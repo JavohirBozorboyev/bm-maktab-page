@@ -54,12 +54,12 @@ const HomeResultSection = ({ data }: Props) => {
   });
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-gray-50/50">
       <div className="py-10 backdrop-blur-md z-10 relative " id="results">
         <div className="mx-auto">
           <div className=" mx-auto   flex flex-col  items-center">
             <PageTitle
-              info="Best Students"
+              info="04"
               title="Natijalar"
               content=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto suscipit accusantium exercitationem illum non voluptate quos veniam qui perferendis. "
             />
@@ -84,7 +84,7 @@ const HomeResultSection = ({ data }: Props) => {
           </div>
         </div>
       </div>
-      <article className="absolute text-[16rem] lg:text-[20rem] top-0 left-0 z-0 text-gray-400">
+      <article className="absolute text-[16rem] lg:text-[20rem] -top-20 left-0 z-0 text-gray-400">
         04
       </article>
     </div>

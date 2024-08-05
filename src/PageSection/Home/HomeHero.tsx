@@ -81,6 +81,9 @@ const HomeHero = (props: Props) => {
             <span className="backdrop-blur-3xl cursor-pointer absolute -bottom-0 right-32 p-2 rounded-full font-light text-yellow-300 outline-dashed outline-1 animate-pulse opacity-70 rotate-6 outline-yellow-300 px-3 uppercase text-sm">
               # Bialogiya
             </span>
+            <div className="absolute -top-20 -left-20 -z-10">
+              <BmLogo class="w-44 h-44  opacity-10  -rotate-12 " />
+            </div>
           </div>
         </div>
       </div>
