@@ -8,13 +8,13 @@ type Props = {
 const HomeResultCrad = ({ data }: Props) => {
   return (
     <>
-      <div className="mt-10 grid grid-cols-12 gap-6 border border-dashed p-4 lg:p-6 rounded-2xl keen-slider__slide ">
+      <div className="mt-10 grid grid-cols-12 gap-6 border border-dashed p-4 lg:p-6 rounded-2xl keen-slider__slide backdrop-blur-xl ">
         <div className="col-span-12 md:col-span-6">
           <Image
             src={data.photo}
             alt={data.full_name}
             width={300}
-            height={300}  
+            height={300}
             placeholder="blur"
             loading="lazy"
             blurDataURL={data.photo}

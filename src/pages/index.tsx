@@ -29,13 +29,16 @@ export default function Home({ subject, studentResult, teacherResult }: any) {
         <HomeSubjectList subject={subject} />
         <BrandMarquee type={false} />
         <WeekExamSection />
+        {/* <BrandMarquee type={true} /> */}
+        <HomeTDB />
+        <BrandMarquee type={true} />
+
         <HomeResultSection data={studentResult} />
 
         <BrandMarquee type={true} />
         <HomeTeacherSlider data={teacherResult} />
         <BrandMarquee type={false} />
 
-        <HomeTDB />
         <FaqSection />
       </main>
     </>

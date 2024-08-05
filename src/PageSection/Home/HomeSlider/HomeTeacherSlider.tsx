@@ -53,8 +53,7 @@ const HomeTeacherSlider = ({ data }: Props) => {
     <div className=" relative py-20">
       <div className="container mx-auto p-4 md:p-0 py-4  flex flex-col items-center ">
         <PageTitle
-          title={"Bizning Ustozlar"}
-          info={"Dream Team"}
+          title={" 👨‍🏫 Bizning Ustozlar 👩‍🏫"}
           content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, iure? consectetur adipisicing elit. Illo, iure?"
         />
 

@@ -4,7 +4,7 @@ type Props = {};
 
 const ResultPageHeroSection = (props: Props) => {
   return (
-    <div>
+    <section>
       <div
         style={{
           background: `linear-gradient(0deg, rgba(238,238,238,0.8799894957983193) 36%, rgba(255,255,255,0.8127626050420168) 100%),
@@ -26,7 +26,7 @@ const ResultPageHeroSection = (props: Props) => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

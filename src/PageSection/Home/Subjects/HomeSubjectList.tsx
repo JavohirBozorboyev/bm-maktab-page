@@ -11,15 +11,12 @@ type Props = {
 
 const HomeSubjectList = ({ subject }: Props) => {
   return (
-    <div className="relative overflow-hidden">
-      <div
-        className="p-3 lg:p-0 py-10 z-10 relative backdrop-blur-md"
-        id="subjects"
-      >
+    <section id="subjects" className="relative overflow-hidden">
+      <div className="p-3 lg:p-0 py-10 z-10 relative backdrop-blur-md">
         <div className=" mx-auto   flex flex-col  items-center">
           <PageTitle
             info="01"
-            title="Iqtisoslik Fanlari"
+            title="Iqtisoslik Fanlari 📚"
             content=" Lorem ipsum dolor sit amet consectetur adipisicing elit."
           />
         </div>
@@ -60,14 +57,14 @@ const HomeSubjectList = ({ subject }: Props) => {
           </div>
         </div>
       </div>
-      <article className="absolute text-[16rem] lg:text-[20rem] -top-20   right-0 z-0 text-gray-400">
+      <article className="absolute text-[16rem] lg:text-[20rem] -top-20   right-0 z-0 text-gray-300">
         01
       </article>
       <div className="flex justify-center">
         <article className="absolute border-[3px] border-yellow-500 w-[700px] mx-auto h-[700px] bottom-[-70%]  rounded-full opacity-50 animate-pulse"></article>
       </div>
       <article className="absolute left-[-60%] lg:left-[-20%] top-10 w-96 h-96 bg-gradient-to-tr from-blue-200 to-teal-200 opacity-30 rounded-full animate-pulse"></article>
-    </div>
+    </section>
   );
 };
 

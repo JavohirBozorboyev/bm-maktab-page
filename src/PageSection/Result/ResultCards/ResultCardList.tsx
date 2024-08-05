@@ -7,7 +7,7 @@ type Props = {
 };
 const ResultCardList = ({ filter = "Barcha-fanlar", data }: Props) => {
   return (
-    <div className="container px-4 md:px-0 mx-auto grid grid-cols-1  md:grid-cols-2  gap-4  pb-10">
+    <section className="container px-4 md:px-0 mx-auto grid grid-cols-1  md:grid-cols-2  gap-4  pb-10">
       {data
         .filter((item: { subject: string }) =>
           filter === "Barcha-fanlar" ? true : item.subject === filter
@@ -23,7 +23,7 @@ const ResultCardList = ({ filter = "Barcha-fanlar", data }: Props) => {
             return <ResultCard key={item.id} item={item} />;
           }
         )}
-    </div>
+    </section>
   );
 };
 
