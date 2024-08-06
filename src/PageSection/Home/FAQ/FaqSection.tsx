@@ -14,6 +14,8 @@ const FaqSection = () => {
         {faqData.map((item, i) => {
           return (
             <details
+              data-aos="fade-up"
+              data-aos-duration={`${500 * (i + 1)}`}
               className="cursor-pointer border-t border-dashed py-4"
               key={i}
             >

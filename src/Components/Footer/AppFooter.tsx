@@ -6,6 +6,36 @@ import Link from "next/link";
 import { AppNavData } from "@/data/AppNavData";
 import BmLogo from "@/assets/BmLogo";
 
+const massengerLink = [
+  {
+    name: "Telefon Raqam",
+    path: "/",
+  },
+  {
+    name: "Telegram",
+    path: "/",
+  },
+  {
+    name: "Instagram",
+    path: "/",
+  },
+  {
+    name: "Facebook",
+    path: "/",
+  },
+];
+
+const developerLink = [
+  {
+    name: "Frontend",
+    path: "/",
+  },
+  {
+    name: "Backend",
+    path: "/",
+  },
+];
+
 type Props = {};
 
 const AppFooter = (props: Props) => {
@@ -16,7 +46,10 @@ const AppFooter = (props: Props) => {
           <BmLogo width={40} height={40} class="w-10 h-10" />
           <p className=" text-sm mt-8 text-gray-400">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            eos necessitatibus et doloremque beatae laborum aspernatur,
+            eos necessitatibus et doloremque beatae laborum aspernatur, Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Dolores itaque
+            adipisci nesciunt deleniti! Veritatis, vero culpa sunt ratione
+            repellendu.{" "}
           </p>
         </div>
         <div className="col-span-12 sm:col-span-6 md:col-span-3 lg:col-span-2 flex flex-col ">
@@ -40,7 +73,7 @@ const AppFooter = (props: Props) => {
             {"  Bog'lanish"}
           </span>
           <div className="mt-5 ml-2 flex flex-col gap-2">
-            {AppNavData.map((item, i) => {
+            {massengerLink.map((item, i) => {
               return (
                 <Link
                   key={i}
@@ -58,7 +91,7 @@ const AppFooter = (props: Props) => {
             {"Developers"}
           </span>
           <div className="mt-5 ml-2 flex flex-col gap-2">
-            {AppNavData.map((item, i) => {
+            {developerLink.map((item, i) => {
               return (
                 <Link
                   key={i}

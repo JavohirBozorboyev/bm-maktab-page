@@ -8,13 +8,18 @@ import HomeInfo from "@/PageSection/Home/HomeInfo/HomeInfo";
 import BrandMarquee from "@/PageSection/Home/BrandMarquee/BrandMarquee";
 import Head from "next/head";
 import FaqSection from "@/PageSection/Home/FAQ/FaqSection";
-import HomeTarget from "@/PageSection/Home/HomeInfo/HomeTarget";
 import HomePreorty from "@/PageSection/Home/HomeInfo/HomePreorty";
 import WeekExamSection from "@/PageSection/Home/Exam/WeekExamSection";
+import Contact from "@/PageSection/Home/Contact";
+
+
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ subject, studentResult, teacherResult }: any) {
+  
+
   return (
     <>
       <Head>
@@ -35,11 +40,12 @@ export default function Home({ subject, studentResult, teacherResult }: any) {
 
         <HomeResultSection data={studentResult} />
 
-        <BrandMarquee type={true} />
-        <HomeTeacherSlider data={teacherResult} />
         <BrandMarquee type={false} />
+        <HomeTeacherSlider data={teacherResult} />
+        <BrandMarquee type={true} />
 
         <FaqSection />
+        {/* <Contact /> */}
       </main>
     </>
   );

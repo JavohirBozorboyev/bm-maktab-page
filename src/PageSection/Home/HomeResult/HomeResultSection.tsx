@@ -75,6 +75,8 @@ const HomeResultSection = ({ data }: Props) => {
 
           <div className="mt-20 mb-10 w-full flex justify-center">
             <Link
+              data-aos="fade-up"
+              data-aos-duration={`1000`}
               href={"/results"}
               className="border border-dashed p-3 rounded-xl px-8 flex  items-center gap-2 hover:border-slate-700  text-gray-400  uppercase hover:text-slate-700 active:scale-95 duration-300 "
             >
@@ -84,7 +86,11 @@ const HomeResultSection = ({ data }: Props) => {
           </div>
         </div>
       </div>
-      <article className="absolute text-[16rem] lg:text-[20rem] -top-20 left-0 z-0 text-gray-300">
+      <article
+        data-aos="fade-down-right"
+        data-aos-duration={`3000`}
+        className="absolute text-[16rem] lg:text-[20rem] -top-20 left-0 z-0 text-gray-300"
+      >
         04
       </article>
       <article className="absolute right-[-60%] lg:right-[-20%] bottom-10 w-96 h-96 bg-gradient-to-tr from-blue-200 to-teal-200 opacity-30 rounded-full animate-pulse"></article>

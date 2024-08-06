@@ -18,6 +18,8 @@ const HomeSubjectCard = ({ item, i }: { item: any; i: number }) => {
 
   return (
     <div
+      data-aos="zoom-in"
+      data-aos-duration={`${500 * (i + 1)}`}
       className={` outline-dashed outline-1 outline-offset-2  hover:scale-[1.02] duration-300  rounded-xl  items-center  relative  p-4  ${Color[i]}`}
     >
       <h1 className="text-2xl text-white  uppercase font-bold">{item.name}</h1>

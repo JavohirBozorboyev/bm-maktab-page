@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import PageTitle from "@/Components/PageTitle/PageTitle";
 import React from "react";
+import Image from "next/image";
+import rasim from "@/assets/bg.png";
 
 type Props = {};
 
@@ -20,27 +22,35 @@ const HomeTDB = (props: Props) => {
 
           <div className="grid grid-cols-12 gap-3 mt-10">
             <div className="col-span-12 md:col-span-6">
-              <img
-                src="https://www.broadnet.com/wp-content/uploads/2020/02/shutterstock_326638589-scaled.jpg"
+              <Image
+                data-aos="zoom-in"
+                data-aos-duration={`500`}
+                src={rasim}
                 alt=""
                 className="rounded-xl w-full h-full   object-cover hover:scale-95 duration-300 "
               />
             </div>
             <div className="col-span-12 md:col-span-6 ">
               <div className="grid grid-cols-2 gap-3">
-                <img
-                  src="https://www.floornature.com/media/photos/38/12616/1_mcbridecharlesryan_ivanhoe_v2com_full.jpg"
+                <Image
+                  data-aos="zoom-in"
+                  data-aos-duration={`1000`}
+                  src={rasim}
                   alt=""
-                  className="rounded-xl w-full  min-h-36  object-cover hover:scale-95 duration-300"
+                  className="rounded-xl w-full  min-h-44  object-cover hover:scale-95 duration-300"
                 />
-                <img
-                  src="https://cdn.mos.cms.futurecdn.net/9X5hWcP3mj2dGwYdTmWD2o-1920-80.jpg"
+                <Image
+                  data-aos="zoom-in"
+                  data-aos-duration={`1500`}
+                  src={rasim}
                   alt=""
-                  className="rounded-xl w-full min-h-36   object-cover hover:scale-95 duration-300"
+                  className="rounded-xl w-full min-h-44   object-cover hover:scale-95 duration-300"
                 />
                 <div className="col-span-2">
-                  <img
-                    src="https://tbn-tv.com/wp-content/uploads/2016/12/best_school_england_uppingham_school_history_lesson-942.jpg"
+                  <Image
+                    data-aos="zoom-in"
+                    data-aos-duration={`2000`}
+                    src={rasim}
                     alt=""
                     className="rounded-xl w-full h-64   object-cover hover:scale-95 duration-300 "
                   />
@@ -51,7 +61,11 @@ const HomeTDB = (props: Props) => {
         </div>
       </div>
 
-      <article className="absolute text-[16rem] lg:text-[20rem] -top-20 right-0 z-0 text-gray-300">
+      <article
+        data-aos="fade-down-left"
+        data-aos-duration={`3000`}
+        className="absolute text-[16rem] lg:text-[20rem] -top-20 right-0 z-0 text-gray-300"
+      >
         03
       </article>
     </div>

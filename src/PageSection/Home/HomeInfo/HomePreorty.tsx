@@ -19,21 +19,29 @@ const HomePreorty = () => {
           <div className=" grid grid-cols-12 items-center gap-5 gap-y-16 xl:gap-10  relative mt-10">
             <div className=" col-span-12 lg:col-span-5 relative grid grid-cols-2 gap-2 lg:gap-4">
               <Image
+                data-aos="zoom-in"
+                data-aos-duration={`500`}
                 src={rasim}
                 alt=""
                 className="col-span-1 w-full h-56 rounded-[40px] rounded-tl-md object-cover hover:scale-105 duration-300"
               />
               <Image
+                data-aos="zoom-in"
+                data-aos-duration={`1000`}
                 src={rasim}
                 alt=""
                 className="col-span-1 w-full h-56 rounded-[40px] rounded-tr-md object-cover hover:scale-105 duration-300"
               />
               <Image
+                data-aos="zoom-in"
+                data-aos-duration={`1500`}
                 src={rasim}
                 alt=""
                 className="col-span-1 w-full h-56 rounded-[40px] rounded-bl-md object-cover hover:scale-105 duration-300"
               />
               <Image
+                data-aos="zoom-in"
+                data-aos-duration={`2000`}
                 src={rasim}
                 alt=""
                 className="col-span-1 w-full h-56 rounded-[40px] rounded-br-md object-cover hover:scale-105 duration-300"
@@ -44,6 +52,8 @@ const HomePreorty = () => {
                 {data.map((item, i) => {
                   return (
                     <Link
+                      data-aos="zoom-in"
+                      data-aos-duration={`${500 * (i + 1)}`}
                       href={item.link}
                       key={i}
                       className=" col-span-12 md:col-span-6 relative"

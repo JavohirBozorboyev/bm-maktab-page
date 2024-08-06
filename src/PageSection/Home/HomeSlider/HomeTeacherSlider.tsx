@@ -50,51 +50,57 @@ const HomeTeacherSlider = ({ data }: Props) => {
   });
 
   return (
-    <div className=" relative py-20">
-      <div className="container mx-auto p-4 md:p-0 py-4  flex flex-col items-center ">
-        <PageTitle
-          title={" 👨‍🏫 Bizning Ustozlar 👩‍🏫"}
-          content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, iure? consectetur adipisicing elit. Illo, iure?"
-        />
+    <div className="relative overflow-hidden">
+      <div className=" relative py-20 backdrop-blur-md z-10">
+        <div className="container mx-auto p-4 md:p-0 py-4  flex flex-col items-center ">
+          <PageTitle
+            title={" 👨‍🏫 Bizning Ustozlar 👩‍🏫"}
+            content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, iure? consectetur adipisicing elit. Illo, iure?"
+          />
 
-        <div ref={sliderRef} className="keen-slider  mt-4  relative">
-          {data.map((item, i) => {
-            return <HomeTeacherSliderCard key={i} data={item} />;
-          })}
+          <div ref={sliderRef} className="keen-slider  mt-4  relative">
+            {data.map((item, i) => {
+              return <HomeTeacherSliderCard key={i} data={item} />;
+            })}
 
-          {loaded && instanceRef.current && (
-            <>
-              <Arrow
-                left
-                onClick={(e: any) =>
-                  e.stopPropagation() || instanceRef.current?.prev()
-                }
-                disabled={currentSlide === 0}
-              />
+            {loaded && instanceRef.current && (
+              <>
+                <Arrow
+                  left
+                  onClick={(e: any) =>
+                    e.stopPropagation() || instanceRef.current?.prev()
+                  }
+                  disabled={currentSlide === 0}
+                />
 
-              <Arrow
-                onClick={(e: any) =>
-                  e.stopPropagation() || instanceRef.current?.next()
-                }
-                disabled={
-                  currentSlide ===
-                  instanceRef.current.track.details.slides.length - 1
-                }
-              />
-            </>
-          )}
-        </div>
+                <Arrow
+                  onClick={(e: any) =>
+                    e.stopPropagation() || instanceRef.current?.next()
+                  }
+                  disabled={
+                    currentSlide ===
+                    instanceRef.current.track.details.slides.length - 1
+                  }
+                />
+              </>
+            )}
+          </div>
 
-        <div className="mt-20  w-full flex justify-center">
-          <Link
-            href={"/teachers"}
-            className="border border-dashed p-3 rounded-xl px-8 flex  items-center gap-2 hover:border-slate-700  text-gray-400  uppercase hover:text-slate-700 active:scale-95 duration-300 "
-          >
-            Batafsil Malumtolar
-            <IconArrowRight className="animate-pulse" />
-          </Link>
+          <div className="mt-20  w-full flex justify-center">
+            <Link
+              data-aos="fade-up"
+              data-aos-duration={`1000`}
+              href={"/teachers"}
+              className="border border-dashed p-3 rounded-xl px-8 flex  items-center gap-2 hover:border-slate-700  text-gray-400  uppercase hover:text-slate-700 active:scale-95 duration-300 "
+            >
+              Batafsil Malumtolar
+              <IconArrowRight className="animate-pulse" />
+            </Link>
+          </div>
         </div>
       </div>
+      <article className="absolute -left-48 -top-48 w-96 h-96 bg-gradient-to-tr from-blue-200 to-pink-200 opacity-30 rounded-full animate-pulse"></article>
+      <article className="absolute -right-48 -bottom-48 w-96 h-96 bg-gradient-to-tr from-green-200 to-yellow-200 opacity-30 rounded-full animate-pulse"></article>
     </div>
   );
 };
