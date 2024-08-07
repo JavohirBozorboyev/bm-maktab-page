@@ -1,9 +1,9 @@
 import { IconArrowDown, IconCaretDownFilled } from "@tabler/icons-react";
 import React from "react";
 
-type Props = {};
+type Props = { statisticResult: any };
 
-const HomeInfo = (props: Props) => {
+const HomeInfo = ({ statisticResult }: Props) => {
   return (
     <div className="py-10 bg-gradient-to-bl from-slate-600 to-slate-700 relative mx-2 rounded-md">
       <article className="flex justify-center items-center ">

@@ -70,21 +70,21 @@ const HomeHero = (props: Props) => {
           </div>
           <div className="col-span-12 md:col-span-6 relative grid grid-cols-12 gap-4">
             <Image
-              data-aos="zoom-in"
+              data-aos="fade-up"
               data-aos-duration="500"
               src={Rasim}
               alt=""
-              className=" col-span-8 w-full h-full rounded-xl object-cover outline-1 outline-dashed outline-offset-4 outline-gray-200"
+              className=" hidden md:block col-span-8 md:col-span-12 lg:col-span-8 w-full h-full rounded-xl object-cover outline-1 outline-dashed outline-offset-4 outline-gray-200"
             />
             <Image
-              data-aos="zoom-in"
+              data-aos="fade-up"
               data-aos-duration="1000"
               src={Rasim}
               alt=""
-              className=" col-span-4 w-full h-full rounded-xl object-cover outline-1 outline-dashed outline-offset-4 outline-gray-200"
+              className=" hidden lg:block col-span-4 w-full h-full rounded-xl object-cover outline-1 outline-dashed outline-offset-4 outline-gray-200"
             />
             <Image
-              data-aos="zoom-in"
+              data-aos="fade-up"
               data-aos-duration="1500"
               src={Rasim}
               alt=""

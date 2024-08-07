@@ -12,14 +12,16 @@ import HomePreorty from "@/PageSection/Home/HomeInfo/HomePreorty";
 import WeekExamSection from "@/PageSection/Home/Exam/WeekExamSection";
 import Contact from "@/PageSection/Home/Contact";
 
-
 import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ subject, studentResult, teacherResult }: any) {
-  
-
+export default function Home({
+  subject,
+  studentResult,
+  teacherResult,
+  statisticResult,
+}: any) {
   return (
     <>
       <Head>
@@ -28,7 +30,7 @@ export default function Home({ subject, studentResult, teacherResult }: any) {
 
       <main>
         <HomeHero />
-        <HomeInfo />
+        <HomeInfo statisticResult={statisticResult} />
         <HomePreorty />
         <BrandMarquee type={true} />
         <HomeSubjectList subject={subject} />
@@ -55,15 +57,20 @@ export async function getStaticProps() {
   const res = await fetch(`${process.env.ApiUrl}/mainapp/course/`);
   const student = await fetch(`${process.env.ApiUrl}/mainapp/top-students/`);
   const teacher = await fetch(`${process.env.ApiUrl}/mainapp/staff/`);
+  const statistic = await fetch(
+    `${process.env.ApiUrl}/mainapp/mainpage/statistic/`
+  );
   const subject = await res.json();
   const studentResult = await student.json();
   const teacherResult = await teacher.json();
+  const statisticResult = await statistic.json();
 
   return {
     props: {
       subject,
       studentResult,
       teacherResult,
+      statisticResult,
     },
     revalidate: 10 * 60,
   };
