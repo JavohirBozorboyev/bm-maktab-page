@@ -27,7 +27,7 @@ const index = ({ stundetResult }: Props) => {
 export default index;
 
 export async function getStaticProps() {
-  const student = await fetch(`${process.env.ApiUrl}/mainapp/top-students/`);
+  const student = await fetch(`${process.env.ApiUrl}/main-website/results/`);
   const stundetResult = await student.json();
 
   return {

@@ -1,10 +1,7 @@
 import React from "react";
-import { SubjectData, SubjectDataType } from "@/data/SubjectData";
 import HomeSubjectCard from "./HomeSubjectCard";
 import PageTitle from "@/Components/PageTitle/PageTitle";
-import useSWR from "swr";
-import Image from "next/image";
-import rasim from "@/assets/bg.png";
+
 type Props = {
   subject: any;
 };

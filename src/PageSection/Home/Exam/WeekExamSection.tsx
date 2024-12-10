@@ -1,11 +1,12 @@
 import Marquee from "@/Components/magicui/Marquee";
-import PageTitle from "@/Components/PageTitle/PageTitle";
+// import PageTitle from "@/Components/PageTitle/PageTitle";
 import React from "react";
 import Image from "next/image";
-import rasim from "@/assets/bg.png";
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const WeekExamSection = (props: Props) => {
+const WeekExamSection = ({ data }: Props) => {
   return (
     <section
       id="weekExam"
@@ -42,26 +43,38 @@ const WeekExamSection = (props: Props) => {
         </div>
         <div className="  py-20">
           <Marquee reverse pauseOnHover className="[--duration:20s]">
-            {[1, 2, 3, 4].map((item, i) => (
-              <div key={i} className="w-96">
-                <Image
-                  src={rasim}
-                  alt={""}
-                  className="w-full h-56 object-cover rounded-md"
-                />
-              </div>
-            ))}
+            {data
+              ?.slice(0, data.length / 2)
+              .map((item: { photo: any }, i: React.Key | null | undefined) => (
+                <div key={i} className="w-96">
+                  <Image
+                    width={100}
+                    height={100}
+                    src={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    alt={""}
+                    className="w-full h-56 object-cover rounded-md"
+                    blurDataURL={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
           </Marquee>
           <Marquee pauseOnHover className="[--duration:20s]">
-            {[1, 2, 3, 4].map((item, i) => (
-              <div key={i} className="w-96">
-                <Image
-                  src={rasim}
-                  alt={""}
-                  className="w-full h-56 object-cover rounded-md"
-                />
-              </div>
-            ))}
+            {data
+              ?.slice(data.length / 2, data.length)
+              .map((item: { photo: any }, i: React.Key | null | undefined) => (
+                <div key={i} className="w-96">
+                  <Image
+                    width={100}
+                    height={100}
+                    src={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    alt={""}
+                    className="w-full h-56 object-cover rounded-md"
+                    blurDataURL={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
           </Marquee>
         </div>
       </div>

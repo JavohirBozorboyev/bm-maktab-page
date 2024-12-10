@@ -36,12 +36,12 @@ const HomeHero = (props: Props) => {
               data-aos-duration="2000"
               className="text-gray-400 border-l-2 border-dashed pl-4 border-slate-500 text-sm lg:text-base"
             >
-              Boborahim Mashrab xususiy maktabi zamonaviy sharoitlar bilan
+              {`Boborahim Mashrab xususiy maktabi zamonaviy sharoitlar bilan
               ta'minlangan ixtisoslashtirilgan maktab bo'lib, 1-sinfdan
               11-sinfgacha bo'lgan o'quvchilar taxsil oladi. Ixtisoslik
               yo'nalishlari matematika, informatika (I.T), ingliz tili, rus
               tili, kimyo hamda biologiya fanlari bo'lib darslar o'zbek tilida
-              olib boriladi
+              olib boriladi`}
             </p>
             <div className="flex gap-5 items-center flex-wrap mt-10">
               <Link

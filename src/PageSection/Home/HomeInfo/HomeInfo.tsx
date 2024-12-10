@@ -43,7 +43,7 @@ const HomeInfo = ({ statisticResult }: Props) => {
               {statisticResult?.students_count}
             </p>
             <p className="text-gray-200 mt-2 text-sm">
-              Taxsil olayotgan o'quvchilar
+              {`Taxsil olayotgan o'quvchilar`}
             </p>
             <span
               className={`absolute w-4 h-4  bg-yellow-400  rounded-full top-5 right-5 animate-pulse`}
@@ -62,7 +62,7 @@ const HomeInfo = ({ statisticResult }: Props) => {
               {statisticResult?.banchs_count}
             </p>
             <p className="text-gray-200 mt-2 text-sm">
-              O'zbekiston bo'ylab filiallar soni
+              {` O'zbekiston bo'ylab filiallar soni`}
             </p>
             <span
               className={`absolute w-4 h-4  bg-yellow-400  rounded-full top-5 right-5 animate-pulse`}

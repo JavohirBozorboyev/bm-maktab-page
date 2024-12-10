@@ -21,8 +21,8 @@ export default function Home({
   // studentResult,
   // teacherResult,
   statisticResult,
+  weekExam,
 }: any) {
-
   return (
     <>
       <Head>
@@ -36,13 +36,13 @@ export default function Home({
         <HomePreorty />
         <BrandMarquee type={true} />
         <HomeSubjectList subject={subject} />
-        {/*<BrandMarquee type={false} /> */}
-        <WeekExamSection />
-        {/* <BrandMarquee type={true} /> */}
-        {/* <HomeTDB />
+        <BrandMarquee type={false} />
+        <WeekExamSection data={weekExam} />
+        <BrandMarquee type={true} />
+        <HomeTDB />
         <BrandMarquee type={true} />
 
-        <HomeResultSection data={studentResult} />
+        {/*  <HomeResultSection data={studentResult} />
 
         <BrandMarquee type={false} />
         <HomeTeacherSlider data={teacherResult} />
@@ -59,6 +59,9 @@ export async function getStaticProps() {
   const res = await fetch(
     `${process.env.ApiUrl}/main-website/home-page/sciences/`
   );
+  const weekExamRes = await fetch(
+    `${process.env.ApiUrl}/main-website/home-page/exams/`
+  );
   // const student = await fetch(
   //   `${process.env.ApiUrl}/main-website/top-students/`
   // );
@@ -70,6 +73,7 @@ export async function getStaticProps() {
   // const studentResult = await student.json();
   // const teacherResult = await teacher.json();
   const statisticResult = await statistic.json();
+  const weekExam = await weekExamRes.json();
 
   return {
     props: {
@@ -77,6 +81,7 @@ export async function getStaticProps() {
       // studentResult,
       // teacherResult,
       statisticResult,
+      weekExam,
     },
     revalidate: 10 * 60,
   };

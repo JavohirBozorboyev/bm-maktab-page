@@ -26,7 +26,7 @@ export default index;
 
 export async function getStaticProps() {
   const teacher = await fetch(
-    `https://bmschoolwebsite.pythonanywhere.com/mainapp/staff/`
+    `${process.env.ApiUrl}/main-website/home-page/teachers/`
   );
   const teacherResult = await teacher.json();
 
