@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
-import Link from "next/link";
-import { IconArrowRight } from "@tabler/icons-react";
 import Image from "next/image";
+import React from "react";
 const HomeSubjectCard = ({ item, i }: { item: any; i: number }) => {
   const Color = [
     "outline-blue-300 bg-blue-300/50",
@@ -20,13 +18,24 @@ const HomeSubjectCard = ({ item, i }: { item: any; i: number }) => {
     <div
       data-aos="zoom-in"
       data-aos-duration={`${500 * (i + 1)}`}
-      className={` outline-dashed outline-1 outline-offset-2  hover:scale-[1.02] duration-300  rounded-xl  items-center  relative  p-4  ${Color[i]}`}
+      className={` outline-dashed outline-1 outline-gray-300 outline-offset-2 p-4  hover:scale-[1.02] duration-300  rounded-xl  items-center  relative  bg-gray-100   grid grid-cols-12 gap-2`}
     >
-      <h1 className="text-2xl text-white  uppercase font-bold">{item.name}</h1>
-      <p className="text-sm text-slate-600 font-light text-wrap line-clamp-4 mt-2">
-        {item.about}
-      </p>
-      <span className=" absolute w-4 h-4 bg-white rounded-full top-3 right-3"></span>
+      <article className="col-span-7">
+        <h1 className="text-2xl text-slate-700  uppercase font-bold">
+          {item?.name}
+        </h1>
+        <p className="text-sm text-slate-600 font-light text-wrap line-clamp-4 mt-2">
+          {item?.about}
+        </p>
+        {/* <span className=" absolute w-4 h-4 bg-white rounded-full top-3 right-3"></span> */}
+      </article>
+      <article className="col-span-5">
+        <img
+          className="w-40  h-40 object-cover   rounded-full"
+          src={`${process.env.ApiUrl}/${item?.photo}`}
+          alt={""}
+        />
+      </article>
     </div>
   );
 };

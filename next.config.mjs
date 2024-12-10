@@ -2,10 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "lh3.googleusercontent.com",
-      "bmschoolwebsite.pythonanywhere.com",
-    ],
+    domains: ["lh3.googleusercontent.com", "bmschool01.pythonanywhere.com"],
   },
 };
 

@@ -18,10 +18,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({
   subject,
-  studentResult,
-  teacherResult,
+  // studentResult,
+  // teacherResult,
   statisticResult,
 }: any) {
+
   return (
     <>
       <Head>
@@ -30,14 +31,15 @@ export default function Home({
 
       <main>
         <HomeHero />
+
         <HomeInfo statisticResult={statisticResult} />
         <HomePreorty />
         <BrandMarquee type={true} />
         <HomeSubjectList subject={subject} />
-        <BrandMarquee type={false} />
+        {/*<BrandMarquee type={false} /> */}
         <WeekExamSection />
         {/* <BrandMarquee type={true} /> */}
-        <HomeTDB />
+        {/* <HomeTDB />
         <BrandMarquee type={true} />
 
         <HomeResultSection data={studentResult} />
@@ -46,7 +48,7 @@ export default function Home({
         <HomeTeacherSlider data={teacherResult} />
         <BrandMarquee type={true} />
 
-        <FaqSection />
+        <FaqSection /> */}
         {/* <Contact /> */}
       </main>
     </>
@@ -54,22 +56,26 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.ApiUrl}/mainapp/course/`);
-  const student = await fetch(`${process.env.ApiUrl}/mainapp/top-students/`);
-  const teacher = await fetch(`${process.env.ApiUrl}/mainapp/staff/`);
+  const res = await fetch(
+    `${process.env.ApiUrl}/main-website/home-page/sciences/`
+  );
+  // const student = await fetch(
+  //   `${process.env.ApiUrl}/main-website/top-students/`
+  // );
+  // const teacher = await fetch(`${process.env.ApiUrl}/main-website/staff/`);
   const statistic = await fetch(
-    `${process.env.ApiUrl}/mainapp/mainpage/statistic/`
+    `${process.env.ApiUrl}/main-website/home-page/stats/`
   );
   const subject = await res.json();
-  const studentResult = await student.json();
-  const teacherResult = await teacher.json();
+  // const studentResult = await student.json();
+  // const teacherResult = await teacher.json();
   const statisticResult = await statistic.json();
 
   return {
     props: {
       subject,
-      studentResult,
-      teacherResult,
+      // studentResult,
+      // teacherResult,
       statisticResult,
     },
     revalidate: 10 * 60,

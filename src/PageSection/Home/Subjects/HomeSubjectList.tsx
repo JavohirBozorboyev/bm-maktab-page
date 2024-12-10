@@ -12,7 +12,7 @@ type Props = {
 const HomeSubjectList = ({ subject }: Props) => {
   return (
     <section id="subjects" className="relative overflow-hidden">
-      <div className="p-3 lg:p-0 py-10 z-10 relative backdrop-blur-md">
+      <div className="p-3 lg:p-0 py-20 z-10 relative backdrop-blur-md">
         <div className=" mx-auto   flex flex-col  items-center">
           <PageTitle
             info="01"
@@ -20,9 +20,9 @@ const HomeSubjectList = ({ subject }: Props) => {
             content=" Lorem ipsum dolor sit amet consectetur adipisicing elit."
           />
         </div>
-        <div className=" container mx-auto grid grid-cols-12 pb-10 lg:gap-10 items-center ">
-          <div className="  col-span-12 lg:col-span-7 mt-10 py-5 grid grid-cols-1 md:grid-cols-2 gap-5">
-            {subject.map(
+        <div className=" mt-10 container mx-auto grid grid-cols-1 pb-10 lg:gap-10 items-center ">
+          <div className="  grid grid-cols-1 lg:grid-cols-2  gap-5">
+            {subject?.map(
               (
                 item: { id: any; title?: string; des?: string; img?: any },
                 i: any
@@ -30,38 +30,6 @@ const HomeSubjectList = ({ subject }: Props) => {
                 return <HomeSubjectCard item={item} key={i} i={i} />;
               }
             )}
-          </div>
-          <div className=" col-span-12 lg:col-span-5">
-            <div className="  grid grid-cols-2 gap-2 lg:gap-4">
-              <Image
-                data-aos="zoom-in"
-                data-aos-duration={`500`}
-                src={rasim}
-                alt=""
-                className="col-span-1 w-full h-56 rounded-[40px] rounded-tl-md object-cover hover:scale-105 duration-300"
-              />
-              <Image
-                data-aos="zoom-in"
-                data-aos-duration={`1000`}
-                src={rasim}
-                alt=""
-                className="col-span-1 w-full h-56 rounded-[40px] rounded-tr-md object-cover hover:scale-105 duration-300"
-              />
-              <Image
-                data-aos="zoom-in"
-                data-aos-duration={`1500`}
-                src={rasim}
-                alt=""
-                className="col-span-1 w-full h-56 rounded-[40px] rounded-bl-md object-cover hover:scale-105 duration-300"
-              />
-              <Image
-                data-aos="zoom-in"
-                data-aos-duration={`2000`}
-                src={rasim}
-                alt=""
-                className="col-span-1 w-full h-56 rounded-[40px] rounded-br-md object-cover hover:scale-105 duration-300"
-              />
-            </div>
           </div>
         </div>
       </div>
