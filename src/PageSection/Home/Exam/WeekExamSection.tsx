@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Marquee from "@/Components/magicui/Marquee";
 // import PageTitle from "@/Components/PageTitle/PageTitle";
 import React from "react";
@@ -47,7 +48,7 @@ const WeekExamSection = ({ data }: Props) => {
               ?.slice(0, data.length / 2)
               .map((item: { photo: any }, i: React.Key | null | undefined) => (
                 <div key={i} className="w-96">
-                  <Image
+                  {/* <Image
                     width={100}
                     height={100}
                     src={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
@@ -55,6 +56,13 @@ const WeekExamSection = ({ data }: Props) => {
                     className="w-full h-56 object-cover rounded-md"
                     blurDataURL={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
                     loading="lazy"
+                    quality={100}
+                    placeholder="blur"
+                  /> */}
+                  <img
+                    src={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    alt=""
+                    className="w-full h-56 object-cover rounded-md"
                   />
                 </div>
               ))}
@@ -64,7 +72,7 @@ const WeekExamSection = ({ data }: Props) => {
               ?.slice(data.length / 2, data.length)
               .map((item: { photo: any }, i: React.Key | null | undefined) => (
                 <div key={i} className="w-96">
-                  <Image
+                  {/* <Image
                     width={100}
                     height={100}
                     src={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
@@ -72,6 +80,11 @@ const WeekExamSection = ({ data }: Props) => {
                     className="w-full h-56 object-cover rounded-md"
                     blurDataURL={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
                     loading="lazy"
+                  /> */}
+                  <img
+                    src={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    alt=""
+                    className="w-full h-56 object-cover rounded-md"
                   />
                 </div>
               ))}
