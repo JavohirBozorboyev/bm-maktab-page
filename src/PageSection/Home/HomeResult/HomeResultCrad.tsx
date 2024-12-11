@@ -6,6 +6,7 @@ type Props = {
 };
 
 const HomeResultCrad = ({ data }: Props) => {
+
   return (
     <>
       <div className="mt-10 grid grid-cols-12 gap-6 border border-dashed p-4 lg:p-6 rounded-2xl keen-slider__slide backdrop-blur-md ">
@@ -24,19 +25,10 @@ const HomeResultCrad = ({ data }: Props) => {
         <div className="col-span-12 md:col-span-6 flex flex-col justify-between pr-2 ">
           <div>
             <h1 className="  text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-700 text-wrap">
-              {data.full_name}
+              {data?.first_name} {data?.last_name}
             </h1>
-            <p className="indent-4 text-xs sm:text-sm lg:text-base mt-5 line-clamp-[10] text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              facere nesciunt rerum perspiciatis esse sit animi, excepturi
-              ratione velit dolor labore, reprehenderit quae ullam pariatur
-              nihil ad nostrum ipsum sed quam, laudantium est! Cum pariatur
-              voluptates sed sint doloremque nemo modi maxime nesciunt
-              voluptatem corrupti, a quasi obcaecati labore ea officia voluptate
-              itaque harum. Illo corporis quisquam rem suscipit veritatis
-              deserunt, eligendi doloremque. Fuga nam vel similique? Ex,
-              voluptatum tempora adipisci quaerat aperiam repellendus qui.
-              Debitis doloribus,
+            <p className="indent-4 text-xs sm:text-sm lg:text-base mt-5 line-clamp-[10] ">
+              {data?.about}
             </p>
           </div>
           <div className="grid grid-cols-2 gap-2 lg:gap-5 mt-5 ">

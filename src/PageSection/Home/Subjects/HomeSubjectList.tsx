@@ -37,9 +37,7 @@ const HomeSubjectList = ({ subject }: Props) => {
       >
         01
       </article>
-      <div className="flex justify-center">
-        <article className="absolute border-[3px] border-yellow-500 w-[700px] mx-auto h-[700px] bottom-[-70%]  rounded-full opacity-50 animate-pulse"></article>
-      </div>
+
       <article className="absolute left-[-60%] lg:left-[-20%] top-10 w-96 h-96 bg-gradient-to-tr from-blue-200 to-teal-200 opacity-30 rounded-full animate-pulse"></article>
     </section>
   );

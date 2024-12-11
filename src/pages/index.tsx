@@ -18,7 +18,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({
   subject,
-  // studentResult,
+  studentResult,
   // teacherResult,
   statisticResult,
   weekExam,
@@ -42,13 +42,13 @@ export default function Home({
         <HomeTDB />
         <BrandMarquee type={true} />
 
-        {/*  <HomeResultSection data={studentResult} />
+        <HomeResultSection data={studentResult} />
 
         <BrandMarquee type={false} />
-        <HomeTeacherSlider data={teacherResult} />
-        <BrandMarquee type={true} />
+        {/*   <HomeTeacherSlider data={teacherResult} />*/}
+        {/* <BrandMarquee type={true} /> */}
 
-        <FaqSection /> */}
+        <FaqSection />
         {/* <Contact /> */}
       </main>
     </>
@@ -62,15 +62,15 @@ export async function getStaticProps() {
   const weekExamRes = await fetch(
     `${process.env.ApiUrl}/main-website/home-page/exams/`
   );
-  // const student = await fetch(
-  //   `${process.env.ApiUrl}/main-website/top-students/`
-  // );
+  const student = await fetch(
+    `${process.env.ApiUrl}/main-website/home-page/results/`
+  );
   // const teacher = await fetch(`${process.env.ApiUrl}/main-website/staff/`);
   const statistic = await fetch(
     `${process.env.ApiUrl}/main-website/home-page/stats/`
   );
   const subject = await res.json();
-  // const studentResult = await student.json();
+  const studentResult = await student.json();
   // const teacherResult = await teacher.json();
   const statisticResult = await statistic.json();
   const weekExam = await weekExamRes.json();
@@ -78,7 +78,7 @@ export async function getStaticProps() {
   return {
     props: {
       subject,
-      // studentResult,
+      studentResult,
       // teacherResult,
       statisticResult,
       weekExam,

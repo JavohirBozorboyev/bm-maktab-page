@@ -9,9 +9,7 @@ type Props = {};
 const HomeTDB = (props: Props) => {
   return (
     <div className="relative overflow-hidden" id="monthWinner">
-      <div className="flex justify-center">
-        <article className="absolute border-[3px] border-yellow-500 w-[700px] mx-auto h-[700px] top-[-60%]  rounded-full opacity-50 animate-pulse"></article>
-      </div>
+     
       <div className="py-10 backdrop-blur-md relative z-10">
         <div className="container mx-auto p-4 md:p-0  flex flex-col  items-center">
           <PageTitle

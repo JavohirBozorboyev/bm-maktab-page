@@ -31,13 +31,24 @@ const HomeSubjectCard = ({ item, i }: { item: any; i: number }) => {
         <span className=" absolute w-4 h-4 bg-yellow-500 rounded-full top-3 right-3 outline-double  outline-1 outline-offset-1 outline-yellow-500"></span>
       </article>
       <article className="col-span-5 flex items-center justify-center">
-        <Image
+        {/* <Image
           width={100}
           height={100}
           className="w-36  h-36 object-cover   rounded-full md:w-full md:h-44 md:rounded-lg"
-          src={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
-          blurDataURL={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+          src={item?.photo}
+          blurDataURL={item?.photo}
           alt={item?.name}
+          loading="lazy"
+          quality={100}
+          placeholder="blur"
+        /> */}
+        <img
+          width={100}
+          height={100}
+          className="w-36  h-36 object-cover   rounded-full md:w-full md:h-44 md:rounded-lg"
+          src={item?.photo}
+          alt={item?.name}
+          loading="lazy"
         />
       </article>
     </div>

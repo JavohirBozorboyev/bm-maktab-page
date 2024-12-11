@@ -51,16 +51,16 @@ const WeekExamSection = ({ data }: Props) => {
                   {/* <Image
                     width={100}
                     height={100}
-                    src={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    src={item?.photo}
                     alt={""}
                     className="w-full h-56 object-cover rounded-md"
-                    blurDataURL={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    blurDataURL={item?.photo}
                     loading="lazy"
                     quality={100}
                     placeholder="blur"
                   /> */}
                   <img
-                    src={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    src={item?.photo}
                     alt=""
                     className="w-full h-56 object-cover rounded-md"
                   />
@@ -75,14 +75,14 @@ const WeekExamSection = ({ data }: Props) => {
                   {/* <Image
                     width={100}
                     height={100}
-                    src={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    src={item?.photo}
                     alt={""}
                     className="w-full h-56 object-cover rounded-md"
-                    blurDataURL={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    blurDataURL={item?.photo}
                     loading="lazy"
                   /> */}
                   <img
-                    src={`https://bmschool01.pythonanywhere.com/${item?.photo}`}
+                    src={item?.photo}
                     alt=""
                     className="w-full h-56 object-cover rounded-md"
                   />
