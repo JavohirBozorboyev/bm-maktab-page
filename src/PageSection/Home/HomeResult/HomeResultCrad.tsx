@@ -13,7 +13,7 @@ const HomeResultCrad = ({ data }: Props) => {
         <div className="col-span-12 md:col-span-6">
           <Image
             src={data.photo}
-            alt={data.full_name}
+            alt={data.first_name}
             width={300}
             height={300}
             placeholder="blur"

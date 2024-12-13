@@ -14,37 +14,39 @@ type Props = {
 const TeacherCard = ({ item }: Props) => {
 
   return (
-    <div className="border border-dashed w-full min-h-40 p-3 lg:p-4 rounded-xl hover:border-yellow-600 duration-300 cardAnim  relative">
+    <div className="border border-dashed w-full min-h-40 p-2 rounded-xl hover:border-yellow-600 duration-300 cardAnim  relative group overflow-hidden ">
       <img
         src={item.photo}
         alt={`${item.full_name}`}
-        className="rounded-lg w-full h-72 object-cover"
+        className="rounded-lg w-full h-[500px] object-cover group-hover:scale-[1.03] group-hover:rounded-xl duration-300"
       />
-      <div className="flex flex-col gap-2 py-4">
-        <h2 className="text-xl text-yellow-600">
+
+      <div className="flex flex-col gap-2 py-4 absolute    -bottom-80 group-hover:bottom-0  bg-slate-700 left-0 right-0 duration-300 p-3 rounded-xl m-2">
+        {" "}
+        <h2 className="text-xl text-white">
           {item?.last_name} {item?.first_name}
         </h2>
         <div className="grid grid-cols-2 gap-1 ">
-          <div className="flex items-center gap-2  border border-dashed p-2 px-3 rounded-md">
+          <div className="flex items-start flex-col gap-1  bg-slate-600 p-1 px-2 rounded-md">
             <p className="text-gray-400 text-xs">Fan:</p>
-            <p className="text-slate-700 text-sm">{item?.science_name}</p>
+            <p className="text-gray-100 text-sm">{item?.science_name}</p>
           </div>
-          <div className="flex items-center gap-2  border border-dashed p-2 px-3 rounded-md">
+          <div className="flex items-start flex-col gap-1 bg-slate-600 p-1 px-2 rounded-md">
             <p className="text-gray-400 text-xs">Malumoti:</p>
-            <p className="text-slate-700 text-sm">{item?.dagree}</p>
+            <p className="text-gray-100 text-sm">{item?.dagree}</p>
           </div>
-          <div className="flex items-center gap-2  border border-dashed p-2 px-3 rounded-md">
+          <div className="flex items-start flex-col gap-1 bg-slate-600 p-1 px-2 rounded-md">
             <p className="text-gray-400 text-xs">Tajriba:</p>
-            <p className="text-slate-700 text-sm">{item?.experience}</p>
+            <p className="text-gray-100 text-sm">{item?.experience}</p>
           </div>
           {item?.teacher_certificate.map((cer: any, i: number) => {
             return (
               <div
                 key={i}
-                className="flex items-center gap-2  border border-dashed p-2 px-3 rounded-md"
+                className="flex items-start flex-col gap-1 bg-slate-600 p-1 px-2 rounded-md"
               >
                 <p className="text-gray-400 text-xs">Sertifikat:</p>
-                <p className="text-slate-700 text-sm">{cer.name}</p>
+                <p className="text-gray-100 text-sm">{cer.name}</p>
               </div>
             );
           })}
