@@ -22,7 +22,7 @@ const AppNavbar = (props: Props) => {
     <div>
       <div
         data-aos="fade-down"
-        className="backdrop-blur-lg  fixed top-0 w-full border-b border-dashed  z-[1000] "
+        className="bg-white fixed top-0 w-full border-b border-dashed  z-[1000] "
       >
         <div className="container px-4 mx-auto py-3 md:py-2 grid grid-cols-12 md:px-0 ">
           <div className=" flex items-center col-span-12 lg:col-span-3 justify-between  ">

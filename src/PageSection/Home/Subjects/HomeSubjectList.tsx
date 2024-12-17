@@ -8,17 +8,16 @@ type Props = {
 
 const HomeSubjectList = ({ subject }: Props) => {
   return (
-    <section id="subjects" className="relative overflow-hidden">
+    <section id="subjects" className="relative overflow-hidden ">
       <div className="p-3 lg:p-0 py-20 z-10 relative backdrop-blur-md">
         <div className=" mx-auto   flex flex-col  items-center">
           <PageTitle
-            info="01"
             title="Iqtisoslik Fanlari 📚"
             content=" Lorem ipsum dolor sit amet consectetur adipisicing elit."
           />
         </div>
         <div className=" mt-10 container mx-auto grid grid-cols-1 pb-10 lg:gap-10 items-center ">
-          <div className="  grid grid-cols-1 lg:grid-cols-2  gap-5">
+          <div className="  grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3   gap-5">
             {subject?.map(
               (
                 item: { id: any; title?: string; des?: string; img?: any },

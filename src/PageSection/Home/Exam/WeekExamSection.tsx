@@ -16,13 +16,6 @@ const WeekExamSection = ({ data }: Props) => {
       <div className=" backdrop-blur-md relative z-10">
         <div className="container mx-auto pt-20 text-center">
           <div className="flex flex-col gap-5">
-            <p
-              data-aos="fade-up"
-              data-aos-duration={`500`}
-              className="text-sm font-bold  text-gray-200 uppercase"
-            >
-              02
-            </p>
             <h1
               data-aos="fade-up"
               data-aos-duration={`1000`}

@@ -36,9 +36,7 @@ export default function Home({
         <HomePreorty />
         <BrandMarquee type={true} />
         <HomeSubjectList subject={subject} />
-        <BrandMarquee type={false} />
         <WeekExamSection data={weekExam} />
-        <BrandMarquee type={true} />
         <HomeTDB />
         <BrandMarquee type={true} />
 

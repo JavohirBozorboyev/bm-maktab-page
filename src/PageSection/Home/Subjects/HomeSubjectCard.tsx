@@ -1,7 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable jsx-a11y/alt-text */
 import Image from "next/image";
 import React from "react";
+import LearnImg from "../../../assets/Learning.png";
 const HomeSubjectCard = ({ item, i }: { item: any; i: number }) => {
   const Color = [
     "outline-blue-300 bg-blue-300/50",
@@ -19,34 +18,21 @@ const HomeSubjectCard = ({ item, i }: { item: any; i: number }) => {
     <div
       data-aos="zoom-in"
       data-aos-duration={`${500 * (i + 1)}`}
-      className={` outline-dashed outline-1 outline-gray-300 outline-offset-2 p-4  hover:scale-[1.02] duration-300  rounded-xl  items-center  relative  bg-gray-100   grid grid-cols-12 gap-2`}
+      className={` outline-dashed outline-1 outline-gray-300 outline-offset-2 p-4  hover:scale-[1.02] duration-300  rounded-xl  items-center  relative  bg-gray-100 `}
     >
       <article className="col-span-7">
         <h1 className="text-xl text-slate-700 lg:text-2xl  uppercase font-bold">
           {item?.name}
         </h1>
-        <p className="text-xs lg:text-sm text-slate-600 font-light text-wrap line-clamp-4 mt-2">
-          {item?.about}
-        </p>
+
         <span className=" absolute w-4 h-4 bg-yellow-500 rounded-full top-3 right-3 outline-double  outline-1 outline-offset-1 outline-yellow-500"></span>
       </article>
       <article className="col-span-5 flex items-center justify-center">
-        {/* <Image
-          width={100}
-          height={100}
-          className="w-36  h-36 object-cover   rounded-full md:w-full md:h-44 md:rounded-lg"
-          src={item?.photo}
-          blurDataURL={item?.photo}
-          alt={item?.name}
-          loading="lazy"
-          quality={100}
-          placeholder="blur"
-        /> */}
         <img
           width={100}
           height={100}
-          className="w-36  h-36 object-cover   rounded-full md:w-full md:h-44 md:rounded-lg"
-          src={item?.photo}
+          className="w-full"
+          src={`${LearnImg}`}
           alt={item?.name}
           loading="lazy"
         />

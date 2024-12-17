@@ -12,7 +12,6 @@ type Props = {
 };
 
 const TeacherCard = ({ item }: Props) => {
-
   return (
     <div className="border border-dashed w-full min-h-40 p-2 rounded-xl hover:border-yellow-600 duration-300 cardAnim  relative group overflow-hidden ">
       <img
@@ -39,7 +38,7 @@ const TeacherCard = ({ item }: Props) => {
             <p className="text-gray-400 text-xs">Tajriba:</p>
             <p className="text-gray-100 text-sm">{item?.experience}</p>
           </div>
-          {item?.teacher_certificate.map((cer: any, i: number) => {
+          {item?.teacher_certificate?.map((cer: any, i: number) => {
             return (
               <div
                 key={i}
@@ -55,19 +54,19 @@ const TeacherCard = ({ item }: Props) => {
       <div className="border-t border-dashed pt-3 flex flex-col gap-2 absolute top-0 right-3 ">
         <Link
           href={"https://www.instagram.com/"}
-          className=" p-1 flex justify-evenly rounded-lg items-center text-white bg-yellow-500 border-red-400  duration-300  active:scale-95"
+          className=" p-1 flex justify-evenly rounded-lg items-center text-white bg-slate-700 border-red-400  duration-300  active:scale-95"
         >
           <IconBrandInstagram className="w-6 h-6 " />
         </Link>
         <Link
           href={"https://www.instagram.com/"}
-          className=" p-1 flex justify-evenly rounded-lg items-center text-white bg-yellow-500 border-red-400  duration-300  active:scale-95"
+          className=" p-1 flex justify-evenly rounded-lg items-center text-white bg-slate-700 border-red-400  duration-300  active:scale-95"
         >
           <IconBrandFacebook className="w-6 h-6 " />
         </Link>
         <Link
           href={"https://www.instagram.com/"}
-          className=" p-1 flex justify-evenly rounded-lg items-center text-white bg-yellow-500 border-red-400  duration-300  active:scale-95"
+          className=" p-1 flex justify-evenly rounded-lg items-center text-white bg-slate-700 border-red-400  duration-300  active:scale-95"
         >
           <IconBrandTelegram className="w-6 h-6" />
         </Link>
