@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import LearnImg from "../../../assets/Learning.png";
+import LearnImg from "@/assets/Learning.png";
 const HomeSubjectCard = ({ item, i }: { item: any; i: number }) => {
   const Color = [
     "outline-blue-300 bg-blue-300/50",
@@ -27,12 +27,12 @@ const HomeSubjectCard = ({ item, i }: { item: any; i: number }) => {
 
         <span className=" absolute w-4 h-4 bg-yellow-500 rounded-full top-3 right-3 outline-double  outline-1 outline-offset-1 outline-yellow-500"></span>
       </article>
-      <article className="col-span-5 flex items-center justify-center">
+      <article className="col-span-5 flex items-center justify-center mt-5">
         <img
           width={100}
           height={100}
-          className="w-full"
-          src={`${LearnImg}`}
+          className="w-full h-80  object-cover rounded-xl"
+          src={item?.photo}
           alt={item?.name}
           loading="lazy"
         />
