@@ -15,7 +15,6 @@ type SubjectProps = {
 };
 
 const HomeSubjectList = ({ subject }: Props) => {
-  console.log(subject);
 
   return (
     <section id="subjects" className="relative overflow-hidden  ">

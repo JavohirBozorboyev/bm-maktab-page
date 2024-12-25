@@ -18,14 +18,14 @@ const HomeHero = (props: Props) => {
             <h2
               data-aos="fade-up"
               data-aos-duration="500"
-              className="text-xl lg:text-2xl  text-slate-600 text-center"
+              className="text-xl lg:text-2xl  text-slate-700 text-center"
             >
               Boborahim Mashrab nomi xususiy maktab
             </h2>
             <h1
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="text-3xl lg:text-4xl xl:text-5xl my-4  text-slate-700 uppercase text-center "
+              className="text-3xl lg:text-4xl xl:text-5xl my-4  text-slate-700 uppercase text-center font-bold "
             >
               Bizni tanlaganlarga va bizga{" "}
               <span className="text-yellow-500">ishonganlar</span> uchun doim
