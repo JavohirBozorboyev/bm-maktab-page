@@ -22,7 +22,7 @@ const ReviewCard = () => {
 
 export default function BrandMarquee({ type }: { type?: boolean }) {
   return (
-    <div className="bg-slate-200/50 py-5 my-10 relative flex w-full flex-col items-center justify-center overflow-hidden  bg-background ">
+    <div className="bg-slate-200/50 py-5  relative flex w-full flex-col items-center justify-center overflow-hidden  bg-background ">
       <Marquee reverse={type} className="[--duration:20s]">
         {Array.from([1, 2, 3]).map((_, i) => (
           <ReviewCard key={i} />

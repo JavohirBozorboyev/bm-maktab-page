@@ -35,8 +35,8 @@ const WeekExamSection = ({ data }: Props) => {
             </p>
           </div>
         </div>
-        <div className="  py-20">
-          <Marquee reverse pauseOnHover className="[--duration:20s]">
+        <div className="  py-28 ">
+          <Marquee reverse pauseOnHover className="[--duration:60s]">
             {data
               ?.slice(0, data.length / 2)
               .map((item: { photo: any }, i: React.Key | null | undefined) => (
@@ -60,7 +60,7 @@ const WeekExamSection = ({ data }: Props) => {
                 </div>
               ))}
           </Marquee>
-          <Marquee pauseOnHover className="[--duration:20s]">
+          <Marquee pauseOnHover className="[--duration:60s]">
             {data
               ?.slice(data.length / 2, data.length)
               .map((item: { photo: any }, i: React.Key | null | undefined) => (

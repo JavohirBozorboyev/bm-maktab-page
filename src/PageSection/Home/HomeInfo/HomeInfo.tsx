@@ -5,25 +5,25 @@ type Props = { statisticResult: any };
 
 const HomeInfo = ({ statisticResult }: Props) => {
   return (
-    <div className="py-10 bg-gradient-to-bl from-slate-600 to-slate-700 relative ">
-      <article className="flex justify-center items-center ">
+    <div className="py-5 bg-gray-50 relative ">
+      {/* <article className="flex justify-center items-center ">
         <div className="absolute -top-8 bg-white w-16 h-16  rounded-full flex items-center justify-center cursor-pointer">
           <IconCaretDownFilled className="text-slate-700 animate-bounce mt-4" />
         </div>
-      </article>
-      <div className="container px-3 lg:px-0  mx-auto grid grid-cols-12 gap-3 lg:p-5 items-stretch mt-6  ">
+      </article> */}
+      <div className="container px-3 lg:px-0  mx-auto grid grid-cols-12 gap-3 lg:p-5 items-stretch   ">
         <div
           data-aos="fade-up"
           data-aos-duration={`500`}
           className="col-span-6 md:col-span-6 lg:col-span-3"
         >
           <div
-            className={`bg-slate-600 border border-dashed  p-4 lg:p-6 xl:p-8 rounded-xl relative z-10 hover:scale-[1.03]  duration-300`}
+            className={`bg-slate-200 border border-dashed  p-4 lg:p-6 xl:p-8 rounded-xl relative z-10 hover:scale-[1.03]  duration-300`}
           >
-            <p className="text-2xl lg:text-3xl xl:text-4xl text-white font-bold ">
+            <p className="text-2xl lg:text-3xl xl:text-4xl text-slate-700 font-bold ">
               {statisticResult?.yearly_experiense}
             </p>
-            <p className="text-gray-200 mt-2 text-sm">
+            <p className="text-slate-500 mt-2 text-sm">
               Yillik tajriba va ishonch
             </p>
             <span
@@ -37,12 +37,12 @@ const HomeInfo = ({ statisticResult }: Props) => {
           className="col-span-6 md:col-span-6 lg:col-span-3"
         >
           <div
-            className={`bg-slate-600 border border-dashed  p-4 lg:p-6 xl:p-8 rounded-xl relative z-10 hover:scale-[1.03]  duration-300`}
+            className={`bg-slate-200 border border-dashed  p-4 lg:p-6 xl:p-8 rounded-xl relative z-10 hover:scale-[1.03]  duration-300`}
           >
-            <p className="text-2xl lg:text-3xl xl:text-4xl text-white font-bold ">
+            <p className="text-2xl lg:text-3xl xl:text-4xl text-slate-700 font-bold ">
               {statisticResult?.students_count}
             </p>
-            <p className="text-gray-200 mt-2 text-sm">
+            <p className="text-slate-500 mt-2 text-sm">
               {`Taxsil olayotgan o'quvchilar`}
             </p>
             <span
@@ -56,12 +56,12 @@ const HomeInfo = ({ statisticResult }: Props) => {
           className="col-span-6 md:col-span-6 lg:col-span-3"
         >
           <div
-            className={`bg-slate-600 border border-dashed  p-4 lg:p-6 xl:p-8 rounded-xl relative z-10 hover:scale-[1.03]  duration-300`}
+            className={`bg-slate-200 border border-dashed  p-4 lg:p-6 xl:p-8 rounded-xl relative z-10 hover:scale-[1.03]  duration-300`}
           >
-            <p className="text-2xl lg:text-3xl xl:text-4xl text-white font-bold ">
+            <p className="text-2xl lg:text-3xl xl:text-4xl text-slate-700 font-bold ">
               {statisticResult?.banchs_count}
             </p>
-            <p className="text-gray-200 mt-2 text-sm">
+            <p className="text-slate-500 mt-2 text-sm">
               {` O'zbekiston bo'ylab filiallar soni`}
             </p>
             <span
@@ -75,12 +75,12 @@ const HomeInfo = ({ statisticResult }: Props) => {
           className="col-span-6 md:col-span-6 lg:col-span-3"
         >
           <div
-            className={`bg-slate-600 border border-dashed  p-4 lg:p-6 xl:p-8 rounded-xl relative z-10 hover:scale-[1.03]  duration-300`}
+            className={`bg-slate-200 border border-dashed  p-4 lg:p-6 xl:p-8 rounded-xl relative z-10 hover:scale-[1.03]  duration-300`}
           >
-            <p className="text-2xl lg:text-3xl xl:text-4xl text-white font-bold ">
+            <p className="text-2xl lg:text-3xl xl:text-4xl text-slate-700 font-bold ">
               {statisticResult?.teachers_count}
             </p>
-            <p className="text-gray-200 mt-2 text-sm">
+            <p className="text-slate-500 mt-2 text-sm">
               BM-Maktab xodimlar soni
             </p>
             <span
