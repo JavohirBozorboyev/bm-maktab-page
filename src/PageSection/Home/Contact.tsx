@@ -11,7 +11,7 @@ const Contact = (props: Props) => {
             Qabulga <br /> roʻyxatdan oʻting
           </h1>
           <p className="text-white text-sm mt-10 2xl:text-xl">
-            Ma'lumotlaringizni yozib qoldiring, <br /> siz bilan tezda aloqaga
+            Malumotlaringizni yozib qoldiring, <br /> siz bilan tezda aloqaga
             chiqib, maktabimiz haqida yanada batafsil aytib beramiz.
           </p>
         </div>
