@@ -45,9 +45,8 @@ export default function Home({
         <BrandMarquee type={false} />
         {/*   <HomeTeacherSlider data={teacherResult} />*/}
         {/* <BrandMarquee type={true} /> */}
-
+        <Contact />
         <FaqSection />
-        {/* <Contact /> */}
       </main>
     </>
   );

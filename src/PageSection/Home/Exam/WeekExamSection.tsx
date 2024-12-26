@@ -11,7 +11,7 @@ const WeekExamSection = ({ data }: Props) => {
   return (
     <section
       id="weekExam"
-      className="relative overflow-hidden bg-gradient-to-br from-slate-700 to-slate-600"
+      className="relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 mx-2 lg:mx-5 rounded-3xl shadow-2xl shadow-slate-700"
     >
       <div className=" backdrop-blur-md relative z-10">
         <div className="container mx-auto pt-20 text-center">
@@ -35,7 +35,7 @@ const WeekExamSection = ({ data }: Props) => {
             </p>
           </div>
         </div>
-        <div className="  py-28 ">
+        <div className="  pt-20 pb-4 ">
           <Marquee reverse pauseOnHover className="[--duration:60s]">
             {data
               ?.slice(0, data.length / 2)
@@ -55,7 +55,7 @@ const WeekExamSection = ({ data }: Props) => {
                   <img
                     src={item?.photo}
                     alt=""
-                    className="w-full h-56 object-cover rounded-md"
+                    className="w-full h-56 object-cover rounded-2xl"
                   />
                 </div>
               ))}
@@ -77,7 +77,7 @@ const WeekExamSection = ({ data }: Props) => {
                   <img
                     src={item?.photo}
                     alt=""
-                    className="w-full h-56 object-cover rounded-md"
+                    className="w-full h-56 object-cover rounded-2xl"
                   />
                 </div>
               ))}

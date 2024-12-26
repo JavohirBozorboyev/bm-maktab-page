@@ -12,8 +12,8 @@ type Props = {};
 const HomeHero = (props: Props) => {
   return (
     <div className="relative overflow-hidden  ">
-      <div className="relative overflow-hidden backdrop-blur-xl z-10">
-        <div className="container min-h-[90vh] lg:min-h-[85vh] max-w-7xl  px-3 lg:px-0  mx-auto relative z-10 flex items-center justify-center">
+      <div className="relative overflow-hidden backdrop-blur-md z-10">
+        <div className="container min-h-[80vh]  lg:min-h-[85vh] max-w-7xl  px-3 lg:px-0  mx-auto relative z-10 flex items-center justify-center">
           <div className=" flex flex-col gap-5 items-center justify-center z-10 relative">
             <h2
               data-aos="fade-up"
@@ -25,7 +25,7 @@ const HomeHero = (props: Props) => {
             <h1
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="text-3xl lg:text-4xl xl:text-5xl my-4  text-slate-700 uppercase text-center font-bold "
+              className="text-3xl lg:text-4xl xl:text-5xl my-4  text-slate-700  text-center font-bold "
             >
               Bizni tanlaganlarga va bizga{" "}
               <span className="text-yellow-500">ishonganlar</span> uchun doim
@@ -43,7 +43,7 @@ const HomeHero = (props: Props) => {
               tili, kimyo hamda biologiya fanlari bo'lib darslar o'zbek tilida
               olib boriladi`}
             </p>
-            <div className="flex gap-5 items-center flex-wrap mt-10">
+            <div className="flex gap-5 items-center flex-wrap justify-center mt-10">
               <Link
                 data-aos="fade-up"
                 data-aos-duration="3000"
@@ -76,16 +76,27 @@ const HomeHero = (props: Props) => {
       <div
         data-aos="zoom-in-up"
         data-aos-duration="2000"
-        className=" flex justify-center mt-10 absolute -bottom-[550px] lg:-bottom-[650px] left-0 right-0 z-0"
+        className=" flex justify-center mt-10 absolute mx-4 -bottom-[550px] lg:-bottom-[650px] left-0 right-0 z-0"
       >
-        <BmLogo class="w-[1200px] h-[1200px] opacity-25 " />
+        <BmLogo class="w-[1200px] h-[1200px] opacity-35 " />
       </div>
-      <div className="h-[400px] w-[400px] bg-gradient-to-tr from-slate-300 to-slate-200 absolute -top-10 -z-10 rotate-45 rounded-full animate-pulse left-[-15%]"></div>
-      <div className="h-[300px] w-[300px] bg-gradient-to-tr from-yellow-200 to-yellow-100 absolute bottom-10 lg:top-10 -z-10 rotate-45 rounded-full animate-pulse right-[-10%] opacity-30"></div>
+
+      <div
+        data-aos="zoom-in-up"
+        data-aos-duration="3000"
+        className="  mt-10 absolute top-10 right-10 lg:top-10 lg:right-20 z-0"
+      >
+        <BmLogo class="w-40 h-40  opacity-50 drop-shadow-xl  " />
+      </div>
+      <div
+        data-aos="zoom-in-up"
+        data-aos-duration="4000"
+        className="  mt-10 absolute -top-[20%] -left-[20%] xl:-left-[30%] 2xl:-left-[20%]  z-0 hidden lg:block"
+      >
+        <BmLogo class="w-96 h-96 xl:w-[600px] xl:h-[600px]  opacity-15 rotate-45 " />
+      </div>
     </div>
   );
 };
 
 export default HomeHero;
-
-<BmLogo class="w-60 h-60    hover:-rotate-12 duration-300 animate-logo" />;
