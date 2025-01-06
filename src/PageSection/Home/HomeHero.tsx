@@ -5,8 +5,7 @@ import Link from "next/link";
 import AnimatedShinyText from "@/Components/magicui/animated-shiny-text";
 import { IconArrowRight, IconBrandInstagram } from "@tabler/icons-react";
 import { cn } from "@/lib/util/utils";
-import Image from "next/image";
-import Rasim from "@/assets/bg.png";
+
 type Props = {};
 
 const HomeHero = (props: Props) => {

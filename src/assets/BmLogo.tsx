@@ -2,9 +2,15 @@ type Props = {
   width?: number;
   height?: number;
   class?: string;
+  other?: string;
 };
 
-const BmLogo = ({ width = 24, height = 24, class: className }: Props) => {
+const BmLogo = ({
+  width = 24,
+  height = 24,
+  class: className,
+  other,
+}: Props) => {
   return (
     <>
       <svg
