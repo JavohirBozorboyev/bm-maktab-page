@@ -29,7 +29,7 @@ export default function Home({
         <title>Bm-Maktab</title>
       </Head>
 
-      <main>
+      <main >
         <HomeHero />
 
         <HomeInfo statisticResult={statisticResult} />

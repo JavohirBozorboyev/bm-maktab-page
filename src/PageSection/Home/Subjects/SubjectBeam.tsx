@@ -33,18 +33,17 @@ export default function SubjectBeam() {
   const div3Ref = useRef<HTMLDivElement>(null);
   const div4Ref = useRef<HTMLDivElement>(null);
   const div5Ref = useRef<HTMLDivElement>(null);
-  const div5Ref2 = useRef<HTMLDivElement>(null);
   const div6Ref = useRef<HTMLDivElement>(null);
   const div7Ref = useRef<HTMLDivElement>(null);
-  const div7Ref2 = useRef<HTMLDivElement>(null);
   const div8Ref = useRef<HTMLDivElement>(null);
+  const div9Ref = useRef<HTMLDivElement>(null);
 
   return (
     <div
-      className="relative flex h-[800px] w-full items-center justify-center overflow-hidden rounded-lg   p-4 "
+      className="relative flex h-[800px] w-full items-center justify-center  rounded-lg   p-4 "
       ref={containerRef}
     >
-      <div className="flex size-full flex-col max-w-7xl  items-stretch justify-between gap-10 ">
+      <div className="flex size-full flex-col max-w-6xl  items-stretch justify-between gap-10 ">
         <div className="flex flex-row items-center justify-between">
           <Circle
             ref={div1Ref}
@@ -61,7 +60,7 @@ export default function SubjectBeam() {
           </Circle>
           <Circle
             ref={div8Ref}
-            className="size-32 p-0 shadow-none border-none relative   "
+            className="size-32 p-0 shadow-none border-none  -mt-20   "
           >
             <img
               data-aos="zoom-in"
@@ -78,7 +77,7 @@ export default function SubjectBeam() {
           >
             <img
               data-aos="zoom-in"
-              data-aos-duration="1000"
+              data-aos-duration="1200"
               width="200"
               height="200"
               src="https://img.icons8.com/clouds/100/code.png"
@@ -133,8 +132,8 @@ export default function SubjectBeam() {
             />
           </Circle>
           <Circle
-            ref={div7Ref2}
-            className="size-32 p-0 shadow-none border-none relative   "
+            ref={div9Ref}
+            className="size-32 p-0 shadow-none border-none relative -mb-20   "
           >
             <img
               data-aos="zoom-in"
@@ -183,11 +182,8 @@ export default function SubjectBeam() {
       {/*  */}
       <AnimatedBeam
         containerRef={containerRef}
-        fromRef={div7Ref2}
+        fromRef={div9Ref}
         toRef={div4Ref}
-        curvature={85}
-        endYOffset={5}
-        reverse
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -216,9 +212,8 @@ export default function SubjectBeam() {
         containerRef={containerRef}
         fromRef={div8Ref}
         toRef={div4Ref}
-        curvature={-85}
-        endYOffset={-5}
         reverse
+        
       />
     </div>
   );

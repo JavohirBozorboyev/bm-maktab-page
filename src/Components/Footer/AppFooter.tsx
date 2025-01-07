@@ -40,7 +40,7 @@ type Props = {};
 
 const AppFooter = (props: Props) => {
   return (
-    <div className=" bg-gray-100 shadow-inner shadow-white py-14">
+    <div className=" bg-slate-800 shadow-inner shadow-white py-14 fixed bottom-0 top-0 w-full -z-10 flex items-end">
       <div className="container p-4  mx-auto  grid grid-cols-12 gap-4 md:gap-8">
         <div className="col-span-12 sm:col-span-6 md:col-span-6">
           <BmLogo width={40} height={40} class="w-10 h-10" />
@@ -53,7 +53,7 @@ const AppFooter = (props: Props) => {
           </p>
         </div>
         <div className="col-span-12 sm:col-span-6 md:col-span-3 lg:col-span-2 flex flex-col ">
-          <span className="text-lg  uppercase text-slate-700">Sahifalar</span>
+          <span className="text-lg  uppercase text-slate-100">Sahifalar</span>
           <div className="mt-5 ml-2 flex flex-col gap-2">
             {AppNavData.map((item, i) => {
               return (
@@ -69,7 +69,7 @@ const AppFooter = (props: Props) => {
           </div>
         </div>
         <div className="col-span-12 sm:col-span-6 md:col-span-3 lg:col-span-2 flex flex-col ">
-          <span className="text-lg  uppercase text-slate-700">
+          <span className="text-lg  uppercase text-slate-100">
             {"  Bog'lanish"}
           </span>
           <div className="mt-5 ml-2 flex flex-col gap-2">
@@ -87,7 +87,7 @@ const AppFooter = (props: Props) => {
           </div>
         </div>
         <div className="col-span-12 sm:col-span-6 md:col-span-3 lg:col-span-2 flex flex-col ">
-          <span className="text-lg  uppercase text-slate-700">
+          <span className="text-lg  uppercase text-slate-100">
             {"Developers"}
           </span>
           <div className="mt-5 ml-2 flex flex-col gap-2">

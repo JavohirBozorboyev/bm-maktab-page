@@ -11,22 +11,22 @@ const WeekExamSection = ({ data }: Props) => {
   return (
     <section
       id="weekExam"
-      className="relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 mx-2 lg:mx-5 rounded-3xl shadow-2xl shadow-slate-700"
+      className="relative  overflow-hidden bg-slate-100  rounded-[60px]   "
     >
-      <div className=" backdrop-blur-md relative z-10">
-        <div className="container mx-auto pt-20 text-center">
+      <div className=" backdrop-blur-md relative z-10 ">
+        <div className="container mx-auto pt-40 text-center">
           <div className="flex flex-col gap-5">
             <h1
               data-aos="fade-up"
               data-aos-duration={`1000`}
-              className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl   font-extrabold uppercase text-white"
+              className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl   font-extrabold uppercase text-slate-800"
             >
               📖 Haftalik Imtixonlar
             </h1>
             <p
               data-aos="fade-up"
               data-aos-duration={`1500`}
-              className="text-gray-300 text-center text-sm md:text-base max-w-4xl mx-auto"
+              className="text-slate-500 text-center text-sm md:text-base max-w-4xl mx-auto"
             >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
               laborum velit, placeat aliquam accusantium excepturi nesciunt
@@ -35,7 +35,7 @@ const WeekExamSection = ({ data }: Props) => {
             </p>
           </div>
         </div>
-        <div className="  pt-20 pb-4 ">
+        <div className="  pt-20 pb-20 ">
           <Marquee reverse pauseOnHover className="[--duration:60s]">
             {data
               ?.slice(0, data.length / 2)
@@ -87,7 +87,7 @@ const WeekExamSection = ({ data }: Props) => {
       <article
         data-aos="fade-down-right"
         data-aos-duration={`3000`}
-        className="absolute text-[16rem] lg:text-[20rem] -top-20 left-0 z-0 text-slate-500"
+        className="absolute text-[16rem] lg:text-[20rem] -top-10 left-10 z-0 text-slate-500"
       >
         02
       </article>

@@ -10,19 +10,13 @@ type Props = {
 };
 
 const AppLayout = ({ children }: Props) => {
-  // const { data, error, isLoading } = useSWR(
-  //   `${process.env.ApiUrl}/mainapp/course/`
-  // );
-
-  // if (error) return <div>ошибка загрузки</div>;
-  // if (isLoading) return <div>загрузка...</div>;
   useEffect(() => {
     AOS.init({
       offset: 50,
     });
   }, []);
   return (
-    <div>
+    <>
       <Head>
         <title>Bm-Maktab</title>
         {/* <link rel="icon" href="../assets/Logo.png" sizes="any" /> */}
@@ -32,10 +26,12 @@ const AppLayout = ({ children }: Props) => {
           key="title"
         />
       </Head>
-      <AppNavbar />
-      {children}
+      <div className="relative z-10  mb-[850px] sm:mb-[600px] md:mb-[500px]  lg:mb-[400px] xl:mb-[350px] bg-white rounded-b-[80px]">
+        <AppNavbar />
+        {children}
+      </div>
       <AppFooter />
-    </div>
+    </>
   );
 };
 
