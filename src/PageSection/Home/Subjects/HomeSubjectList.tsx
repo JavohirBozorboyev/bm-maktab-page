@@ -25,7 +25,7 @@ const HomeSubjectList = ({ subject }: Props) => {
             content=" Lorem ipsum dolor sit amet consectetur adipisicing elit."
           />
         </div>
-        <div className="  container  mx-auto grid grid-cols-1   lg:gap-10 items-center ">
+        <div className="  container min-h-[80vh] mx-auto grid grid-cols-1   lg:gap-10 items-center ">
           <SubjectBeam />
         </div>
       </div>
